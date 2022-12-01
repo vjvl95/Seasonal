@@ -9,8 +9,7 @@ export default function index() {
         <Route path='/name' element={<Name />} />
         <Route path='/selectCategory' element={<Category />} />
         <Route path='/slotMachine' element={<SlotMachine />} />
-        <Route path='/test' element={<Test />} />
-
+        <Route path='/result/:id' element={<Category />} />
         {/* <Route path='/test' element={<Test />} />
         <Route path='/test/slice' element={<SliceTest />} />
         <Route path='/write' element={<Editor />} /> */}

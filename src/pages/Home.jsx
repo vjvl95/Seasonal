@@ -16,7 +16,7 @@ export default function Home() {
           럭키 슬롯에서 뽑아보세요!
         </SubTitle>
         <StartContaier>
-          <NavLink to='test'>
+          <NavLink to='name'>
             <StartButton>시작하기</StartButton>
           </NavLink>
         </StartContaier>
