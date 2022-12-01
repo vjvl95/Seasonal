@@ -37,6 +37,7 @@ export { default as gini } from './leftSlot/🧞‍♂️.png';
 export { default as kite } from './leftSlot/🧧.png';
 export { default as couple } from './leftSlot/🫂.png';
 export { default as paper } from './leftSlot/📝.png';
+export { default as qustion } from './leftSlot/qustion.png';
 
 export { default as clock } from './rightSlot/⏰.png';
 export { default as sun } from './rightSlot/☀️.png';
@@ -83,3 +84,4 @@ export { default as kiteRight } from './rightSlot/🧧.png';
 export { default as mars } from './rightSlot/🪐.png';
 export { default as number3 } from './rightSlot/number3.png';
 export { default as x } from './rightSlot/x.png';
+export { default as qustionRight } from './rightSlot/qustion.png';
