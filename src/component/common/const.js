@@ -239,7 +239,7 @@ export const slot = [
   [wind, clapRight, '행운'],
   [soon, whiterabbit, '행운'],
 ];
-
+export const category = ['재물운', '건강운', '애정운', '학업운', '행운', '직장운'];
 export const data = [
   ['money', '💰', '재물운'],
   ['health', '💪', '건강운'],
