@@ -1,4 +1,4 @@
-import { imgFileLeft, imgFileRight, slot } from 'component/common/const';
+import { imgFileLeft, imgFileRight, category, slot } from 'component/common/const';
 
 export default function findIndex() {
   const randomNumber = Math.trunc(Math.random() * 50) + 1;
@@ -10,7 +10,7 @@ export default function findIndex() {
     if (i === 1) {
       return -imgFileRight.indexOf(v);
     }
-    return v;
+    return -category.indexOf(v);
   });
   return index;
 }
