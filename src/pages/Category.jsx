@@ -44,14 +44,14 @@ const Background = styled.div`
   padding-top: 10%;
   width: 100%;
   box-shadow: 0px -4px 10px rgba(0, 165, 85, 0.1);
-  border-radius: 200px 200px 0px 0px;
+  border-radius: 125px 125px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
   @media screen and (max-width: 601px) {
     border-radius: 125px 125px 0px 0px;
     padding-top: 15%;
-    background: linear-gradient(#93bf85, white);
   }
 `;
 const StartButton = styled.button`
