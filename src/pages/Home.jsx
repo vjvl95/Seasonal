@@ -1,7 +1,12 @@
 import BlackBox from 'component/common/BlackBox';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import emoticon from '../img/emoticon.png';
+import calendar from '../img/calendar.png';
+
 export default function Home() {
+  const [name, setName] = useState('gg');
   return (
     <>
       <Background>
@@ -16,7 +21,11 @@ export default function Home() {
           럭키 슬롯에서 뽑아보세요!
         </SubTitle>
         <StartContaier>
-          <NavLink to='name'>
+          <div>
+            <img src={emoticon} width='100px' alt='' />
+            <img src={calendar} width='50px' alt='' />
+          </div>
+          <NavLink to='name' state={{ from: name }}>
             <StartButton>시작하기</StartButton>
           </NavLink>
         </StartContaier>
@@ -26,12 +35,17 @@ export default function Home() {
 }
 
 const Background = styled.div`
-  width: calc(100%-40px);
-  height: 200px;
-  margin: 25px;
-  padding-top: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 165, 85, 0.15);
-  border-radius: 15px;
+  padding-top: 10%;
+  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 165, 85, 0.1);
+  border-radius: 125px 125px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 601px) {
+    border-radius: 125px 125px 0px 0px;
+    padding-top: 15%;
+  }
 `;
 
 const SubTitle = styled.div`
@@ -57,6 +71,9 @@ const StartButton = styled.div`
 `;
 const StartContaier = styled.div`
   width: 100%;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
 `;
