@@ -1,8 +1,12 @@
 import BlackBox from 'component/common/BlackBox';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
-export default function Test() {
+
+export default function Name() {
+  const location = useLocation();
+  const { state } = location;
+  console.log(state.from);
   const [name, setName] = useState('');
   const isVaildName = name.length > 1 && name.length <= 20;
   return (
@@ -12,7 +16,7 @@ export default function Test() {
 
         <StartContaier>
           <InputBox value={name} onChange={(e) => setName(e.target.value)}></InputBox>
-          <NavLink to='/selectCategory'>
+          <NavLink to='/selectCategory' state={{ name: name }}>
             <StartButton disabled={!isVaildName}>다음</StartButton>
           </NavLink>
         </StartContaier>
@@ -22,11 +26,17 @@ export default function Test() {
 }
 
 const Background = styled.div`
-  width: calc(100%-40px);
-  height: 200px;
-  margin: 25px;
-  padding-top: 15px;
-  border-radius: 15px;
+  padding-top: 10%;
+  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 165, 85, 0.1);
+  border-radius: 200px 200px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 601px) {
+    border-radius: 125px 125px 0px 0px;
+    padding-top: 15%;
+  }
 `;
 
 const StartButton = styled.button`
@@ -56,6 +66,9 @@ const StartButton = styled.button`
 const StartContaier = styled.div`
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 const InputBox = styled.input`
   width: 250px;
