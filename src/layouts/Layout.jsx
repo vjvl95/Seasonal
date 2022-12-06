@@ -29,16 +29,18 @@ const Top = styled.div`
   background: linear-gradient(#cef1c4, white);
   margin-bottom: 60px;
   height: 15%;
+  @media screen and (max-width: 601px) {
+    margin-bottom: 30px;
+  }
 `;
 
 const Bottom = styled.div`
-  position: absolute;
-  bottom: 0px;
-  width: 50%;
+  width: 100%;
   height: 15%;
   background: linear-gradient(white, #cef1c4);
   @media screen and (max-width: 601px) {
     position: fixed;
+    bottom: 0px;
     width: 100%;
   }
 `;
