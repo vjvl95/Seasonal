@@ -1,12 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
-import { imgFileLeft, imgFileRight } from './const';
+import { imgFileLeft, imgFileRight, category } from './const';
 import findIndex from 'util/findIndex';
-
-export default function SlotComponent() {
-  const [isClick, setIsClick] = useState(false);
-
-  const slotIndex = findIndex();
+export default function SlotComponent({ isClick, setIsClick }) {
+  const slotIndex = isClick ? findIndex() : '';
   console.log(slotIndex);
   useEffect(() => {
     console.log(isClick);
@@ -16,16 +13,20 @@ export default function SlotComponent() {
       <FlexBox>
         <FirstLetter number={slotIndex[0]} isClicked={isClick}>
           {imgFileLeft.map((img, i) => {
-            return <img key={i} src={img} width='80px' height='80px' alt='' />;
+            return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </FirstLetter>
         <SecondLetter number={slotIndex[1]} isClicked={isClick}>
           {imgFileRight.map((img, i) => {
-            return <img key={i} src={img} width='80px' height='80px' alt='' />;
+            return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </SecondLetter>
+        <ThridLetter number={slotIndex[2]} isClicked={isClick}>
+          {category.map((v, i) => {
+            return <span>{v}</span>;
+          })}
+        </ThridLetter>
       </FlexBox>
-      <StartButton onClick={() => setIsClick(!isClick)}>다음</StartButton>
     </>
   );
 }
@@ -52,10 +53,10 @@ const scroll2 = keyframes`
 const FirstLetter = styled.div`
   display: flex;
   flex-direction: column;
-  height: 80px;
+  height: 50px;
   overflow: hidden;
   box-sizing: border-box;
-  margin-right: 3rem;
+  margin-right: 2.5rem;
   --a: ${(props) => props.number};
 
   ${(props) =>
@@ -69,12 +70,11 @@ const FirstLetter = styled.div`
 const SecondLetter = styled.div`
   display: flex;
   flex-direction: column;
-  height: 80px;
+  height: 50px;
   color: blue;
   overflow: hidden;
   box-sizing: border-box;
-  margin-right: 3rem;
-
+  margin-right: 2.5rem;
   --a: ${(props) => props.number};
   ${(props) =>
     props.isClicked &&
@@ -84,35 +84,34 @@ const SecondLetter = styled.div`
       }
     `};
 `;
+
+const ThridLetter = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  overflow: hidden;
+  span {
+    font-size: 30px;
+  }
+  --a: ${(props) => props.number};
+  ${(props) =>
+    props.isClicked &&
+    css`
+      span {
+        animation: ${scroll} 2s 0s linear forwards, ${scroll2} 3s 2s linear forwards;
+      }
+    `};
+`;
+
 const FlexBox = styled.div`
   height: 150px;
+  width: 300px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
-  box-sizing: border-box;
   justify-content: center;
-  box-sizing: border-box;
-`;
-const StartButton = styled.button`
-  width: 190px;
-  height: 64px;
-  font-size: 20px;
-  display: inline-block;
-  background: #00c981;
+  box-shadow: 0px 0px 20px rgba(0, 165, 85, 0.1);
   border-radius: 100px;
-  margin-top: 30px;
-  text-align: center;
-  line-height: 55px;
-  color: white;
-  font-weight: 800;
-  border: none;
-
-  &:disabled {
-    background: gray;
-    border: 3px solid;
-    /* &:hover {
-          background:
-          border: 3px solid 
-          cursor: not-allowed;
-        } */
-  }
+  border: 1px solid rgba(0, 165, 85, 0.1);
+  margin-bottom: 15px;
 `;
