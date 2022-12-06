@@ -3,26 +3,42 @@ import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 export default function Layout() {
   return (
-    <>
-      <Top />
+    <Root>
       <Container>
+        <Top />
         <Outlet />
+        <Bottom />
       </Container>
-      <Bottom />
-    </>
+    </Root>
   );
 }
 
-const Container = styled.div``;
+const Root = styled.div`
+  height: 100vh;
+`;
+const Container = styled.div`
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  @media screen and (max-width: 601px) {
+    width: 100%;
+  }
+`;
 const Top = styled.div`
   width: 100%;
-  height: 100px;
-  background: linear-gradient(#93bf85, white);
+  background: linear-gradient(#cef1c4, white);
+  margin-bottom: 60px;
+  height: 15%;
 `;
+
 const Bottom = styled.div`
-  position: fixed;
+  position: absolute;
   bottom: 0px;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(white, #93bf85);
+  width: 50%;
+  height: 15%;
+  background: linear-gradient(white, #cef1c4);
+  @media screen and (max-width: 601px) {
+    position: fixed;
+    width: 100%;
+  }
 `;
