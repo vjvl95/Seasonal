@@ -6,7 +6,6 @@ import emoticon from '../img/emoticon.png';
 import calendar from '../img/calendar.png';
 
 export default function Home() {
-  const [name, setName] = useState('gg');
   return (
     <>
       <Background>
@@ -25,7 +24,7 @@ export default function Home() {
             <img src={emoticon} width='100px' alt='' />
             <img src={calendar} width='50px' alt='' />
           </div>
-          <NavLink to='name' state={{ from: name }}>
+          <NavLink to='name'>
             <StartButton>시작하기</StartButton>
           </NavLink>
         </StartContaier>
@@ -42,6 +41,7 @@ const Background = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media screen and (max-width: 601px) {
     border-radius: 125px 125px 0px 0px;
     padding-top: 15%;
