@@ -2,11 +2,10 @@ import { useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { imgFileLeft, imgFileRight, category } from './const';
 import findIndex from 'util/findIndex';
-export default function SlotComponent({ isClick, setIsClick }) {
-  const slotIndex = isClick ? findIndex() : '';
+export default function SlotComponent({ slotIndex, isClick, selectCategory }) {
   console.log(slotIndex);
   useEffect(() => {
-    console.log(isClick);
+    console.log(selectCategory);
   }, [isClick]);
   return (
     <>
@@ -22,8 +21,8 @@ export default function SlotComponent({ isClick, setIsClick }) {
           })}
         </SecondLetter>
         <ThridLetter number={slotIndex[2]} isClicked={isClick}>
-          {category.map((v, i) => {
-            return <span>{v}</span>;
+          {category.map((img, i) => {
+            return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </ThridLetter>
       </FlexBox>
@@ -88,7 +87,7 @@ const SecondLetter = styled.div`
 const ThridLetter = styled.div`
   display: flex;
   flex-direction: column;
-  height: 30px;
+  height: 50px;
   overflow: hidden;
   span {
     font-size: 30px;
@@ -97,7 +96,7 @@ const ThridLetter = styled.div`
   ${(props) =>
     props.isClicked &&
     css`
-      span {
+      img {
         animation: ${scroll} 2s 0s linear forwards, ${scroll2} 3s 2s linear forwards;
       }
     `};
