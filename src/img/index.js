@@ -92,3 +92,10 @@ export { default as luckyCategory } from './category/lucky.png';
 export { default as moneyCategory } from './category/money.png';
 export { default as studyCategory } from './category/study.png';
 export { default as workCategory } from './category/work.png';
+
+export { default as moneyBackground } from './backGround/moneyBackground.png';
+export { default as healthyBackground } from './backGround/healthyBackground.png';
+export { default as loveBackground } from './backGround/loveBackground.png';
+export { default as workBackground } from './backGround/workBackground.png';
+export { default as luckyBackground } from './backGround/luckyBackground.png';
+export { default as studyBackground } from './backGround/studyBackground.png';
