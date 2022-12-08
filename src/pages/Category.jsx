@@ -7,9 +7,10 @@ import { data } from '../component/common/const';
 export default function Category() {
   const location = useLocation();
   const { state } = location;
-  console.log(state.from);
   const [category, setCategory] = useState('');
+  const [name, setName] = useState(state.name);
   useEffect(() => {
+    console.log(name);
     console.log(category);
   });
 
@@ -22,7 +23,7 @@ export default function Category() {
           <FlexItem>
             {data.map((v) => {
               return (
-                <span>
+                <span key={v[0]}>
                   <HiddenRadioButton id={v[0]} type='radio' name='category' value={v[2]} />
                   <RadioButton htmlFor={v[0]}>{v[1] + v[2]}</RadioButton>
                 </span>
@@ -31,7 +32,7 @@ export default function Category() {
           </FlexItem>
         </FlexBox>
         <div style={{ textAlign: 'center' }}>
-          <NavLink to='/slotMachine'>
+          <NavLink to='/slotMachine' state={{ category: category, name: name }}>
             <StartButton>다음</StartButton>
           </NavLink>
         </div>
