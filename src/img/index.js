@@ -85,3 +85,10 @@ export { default as mars } from './rightSlot/🪐.png';
 export { default as number3 } from './rightSlot/number3.png';
 export { default as x } from './rightSlot/x.png';
 export { default as qustionRight } from './rightSlot/qustion.png';
+
+export { default as healthyCategory } from './category/healthy.png';
+export { default as loveCategory } from './category/love.png';
+export { default as luckyCategory } from './category/lucky.png';
+export { default as moneyCategory } from './category/money.png';
+export { default as studyCategory } from './category/study.png';
+export { default as workCategory } from './category/work.png';
