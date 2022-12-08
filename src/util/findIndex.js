@@ -18,9 +18,6 @@ export default function findIndex(selectCategory) {
       }
     })
     .filter((v) => v !== undefined);
-
-  console.log(slotIndex[0]);
-  console.log(slot[slotIndex[0]]);
   const index = slot[slotIndex[0]]
     .map((v, i) => {
       if (i === 0) {
@@ -35,5 +32,5 @@ export default function findIndex(selectCategory) {
     })
     .filter((v) => v !== undefined);
   console.log(index);
-  return index;
+  return [...index, slotIndex[0]];
 }
