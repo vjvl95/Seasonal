@@ -1,26 +1,21 @@
 import { useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { imgFileLeft, imgFileRight, category } from './const';
-import findIndex from 'util/findIndex';
 export default function SlotComponent({ slotIndex, isClick, selectCategory }) {
-  console.log(slotIndex);
-  useEffect(() => {
-    console.log(selectCategory);
-  }, [isClick]);
   return (
     <>
       <FlexBox>
-        <FirstLetter number={slotIndex[0]} isClicked={isClick}>
+        <FirstLetter number={slotIndex[0]} end={-40} isClicked={isClick}>
           {imgFileLeft.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </FirstLetter>
-        <SecondLetter number={slotIndex[1]} isClicked={isClick}>
+        <SecondLetter number={slotIndex[1]} end={-46} isClicked={isClick}>
           {imgFileRight.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </SecondLetter>
-        <ThridLetter number={slotIndex[2]} isClicked={isClick}>
+        <ThridLetter number={slotIndex[2]} end={-7} isClicked={isClick}>
           {category.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
@@ -36,13 +31,13 @@ const scroll = keyframes`
     }
 
     to{
-        transform: translateY(calc(-25*100%));
+        transform: translateY(calc(var(--end)*100%));
     }    
 `;
 
 const scroll2 = keyframes`
     from{      
-        transform: translateY(calc(-25*100%));
+        transform: translateY(calc(var(--end)*100%));
     }    
 
     to{
@@ -56,6 +51,7 @@ const FirstLetter = styled.div`
   overflow: hidden;
   box-sizing: border-box;
   margin-right: 2.5rem;
+  --end: ${(props) => props.end};
   --a: ${(props) => props.number};
 
   ${(props) =>
@@ -74,6 +70,7 @@ const SecondLetter = styled.div`
   overflow: hidden;
   box-sizing: border-box;
   margin-right: 2.5rem;
+  --end: ${(props) => props.end};
   --a: ${(props) => props.number};
   ${(props) =>
     props.isClicked &&
@@ -92,6 +89,7 @@ const ThridLetter = styled.div`
   span {
     font-size: 30px;
   }
+  --end: ${(props) => props.end};
   --a: ${(props) => props.number};
   ${(props) =>
     props.isClicked &&
@@ -109,7 +107,7 @@ const FlexBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 20px rgba(0, 165, 85, 0.1);
+  box-shadow: 10px 10px 40px rgba(0, 165, 85, 0.1);
   border-radius: 100px;
   border: 1px solid rgba(0, 165, 85, 0.1);
   margin-bottom: 15px;
