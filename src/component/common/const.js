@@ -97,6 +97,54 @@ import {
   studyCategory,
   workCategory,
 } from '../../img';
+
+import {
+  Gaho,
+  NewYear,
+  EXO,
+  Zobin,
+  Since,
+  WikiMiki,
+  NoSmokingAlbem,
+  SuperStarAlbem,
+  FanfareAlbem,
+  DaySixAlbem,
+  StartAlbem,
+  JRabbitAlbem,
+  SoranAlbem,
+  IOIAlbem,
+  SOMDEFAlbem,
+  LESSERAFIMAlbem,
+  EternityAlbem,
+  BlackPinkAlbem,
+  SeventeenAlbem,
+  NCT127Albem,
+  IUAlbem,
+  IZONEAlbem,
+  BlockBAlbem,
+  GunnyAlbem,
+  WJSNAlbem,
+  PinkfloyedAlbem,
+  YUNAlbem,
+  MeloManceAlbem,
+  BTSAlbem,
+  WheeSungAlbem,
+  MightyMouthAlbem,
+  AMAlbem,
+  SeeYaAlbem,
+  DelegationAlbem,
+  RedVelvetAlbem,
+  OlltiiAlbem,
+  JoyAlbem,
+  AespaAlbem,
+  TwiceAlbem,
+  KihaAlbem,
+  NE1Albem,
+  SejeongAlbem,
+  SS501Albem,
+  FlyAlbem,
+} from '../../img';
+
 export const imgFileLeft = [
   qustion,
   champagne,
@@ -142,7 +190,6 @@ export const imgFileLeft = [
 ];
 export const imgFileRight = [
   qustionRight,
-
   x,
   rabbit,
   strong,
@@ -201,6 +248,7 @@ export const slot = [
     '마신 게 하나도 없는데',
     'Alcohol-Free',
     '트와이스',
+    TwiceAlbem,
   ],
   [
     lightning,
@@ -211,6 +259,7 @@ export const slot = [
     'MY 에너지 나는 너의 에너지 One Two Three E N E R G Y',
     'Energy',
     '마이티마우스',
+    MightyMouthAlbem,
   ],
   [
     health2,
@@ -221,6 +270,7 @@ export const slot = [
     '지금부터 나와같이 어서빨리 운동하자',
     '운동하자',
     '건이',
+    GunnyAlbem,
   ],
   [
     baby,
@@ -231,6 +281,7 @@ export const slot = [
     '후회 없는 젊음이 타오르게 Forever young',
     'Forever Young',
     '블랙핑크',
+    BlackPinkAlbem,
   ],
   [
     power,
@@ -241,6 +292,7 @@ export const slot = [
     "I'm antifragile antifragile Anti ti ti ti fragile fragile",
     'antifragile',
     '르세라핌',
+    LESSERAFIMAlbem,
   ],
   [
     thumb,
@@ -251,6 +303,7 @@ export const slot = [
     "Everything, everything's fine 너대로 충분한 걸",
     'all good',
     '썸데프',
+    SOMDEFAlbem,
   ],
   [
     power,
@@ -261,6 +314,7 @@ export const slot = [
     '넌 모를 거야 내가 얼마나 준비된 어깨를 가졌는지',
     '준비된어깨',
     '소란',
+    SoranAlbem,
   ],
   [
     nosmoking,
@@ -271,6 +325,7 @@ export const slot = [
     '그대 담배를 끊어봐요 (담배 연기 싫어) 건강에도 안 좋은 걸 왜 자꾸 피우시나',
     '금연',
     '건아들',
+    NoSmokingAlbem,
   ],
   [
     money,
@@ -282,7 +337,7 @@ export const slot = [
     '돈벼락',
     '김필',
   ],
-  [money, circus, moneyCategory, '재물운', 'Lotto', 'I just hit the lotto', 'Lotto', 'EXO'],
+  [money, circus, moneyCategory, '재물운', 'Lotto', 'I just hit the lotto', 'Lotto', 'EXO', EXO],
   [
     moneyface,
     money,
@@ -292,6 +347,7 @@ export const slot = [
     "Money it's a hit I'm in the hi-fidelity first class traveling set",
     'money',
     'Pink Floyd',
+    PinkfloyedAlbem,
   ],
   [
     slotmachine,
@@ -302,6 +358,7 @@ export const slot = [
     '야호 터졌다 Ja Ja Ja Jackpot',
     'jackpot',
     '블락비',
+    BlockBAlbem,
   ],
   [
     newyear,
@@ -312,6 +369,7 @@ export const slot = [
     '축제는 절정인 걸 끝나지 않을 이건 Climax  나의 모든 순간이 아름답고 눈부셔',
     'fiesta',
     '아이즈원',
+    IZONEAlbem,
   ],
   [
     oksing,
@@ -322,6 +380,7 @@ export const slot = [
     '승리를 손에 꽉 잡아 말아 쥐어 Worth more than jewels',
     'coin',
     '아이유',
+    IUAlbem,
   ],
   [
     lucky,
@@ -332,6 +391,7 @@ export const slot = [
     'All your dreams come true 널 믿어 dreams come true',
     'dreams come true',
     'NCT127',
+    NCT127Albem,
   ],
 
   //10
@@ -344,6 +404,7 @@ export const slot = [
     '끝엔 해피엔딩일 거야 나도 해냈잖아 취뽀',
     'SIGN',
     'SINCE',
+    Since,
   ],
   [
     paper,
@@ -354,6 +415,7 @@ export const slot = [
     '끝엔 해피엔딩일 거야 나도 해냈잖아 취뽀',
     'SIGN',
     'SINCE',
+    Since,
   ],
 
   [
@@ -365,6 +427,7 @@ export const slot = [
     '점점 더 좋은걸 난 나라서 행복해',
     '행복 (Happiness)',
     '	레드벨벳',
+    RedVelvetAlbem,
   ],
   [
     love,
@@ -375,6 +438,7 @@ export const slot = [
     "In love's time, all you'll ever need In the life you lead will be guaranteed",
     "In Love's Time",
     'the delegation',
+    DelegationAlbem,
   ],
   [
     ring,
@@ -385,6 +449,7 @@ export const slot = [
     '아프지 마요 언제나 웃어요 약속할게요 그대만을 사랑해요 My Lover Lover 나와 결혼해줘요',
     '결혼할까요',
     '씨야',
+    SeeYaAlbem,
   ],
   [
     love,
@@ -395,6 +460,7 @@ export const slot = [
     '친구로 친구로 지내야 한단 이유로 하지만 이제는 고백할께. 너를 사랑해',
     '친구의 고백',
     '2AM',
+    AMAlbem,
   ],
   [
     love,
@@ -405,6 +471,7 @@ export const slot = [
     '사랑은 맛있어 달빛 젖은 햇살 머금은 세상의 선물',
     '사랑은 맛있다♡',
     '휘성',
+    WheeSungAlbem,
   ],
   [
     gift,
@@ -415,6 +482,7 @@ export const slot = [
     '항상 평범했던 일상도 특별해지는 이 순간',
     '선물',
     '멜로망스',
+    MeloManceAlbem,
   ],
   //20
   [
@@ -426,6 +494,7 @@ export const slot = [
     '이렇게 우리 함께 늙자 오늘자 우리의 신혼일기',
     '신혼일기',
     '윤딴딴',
+    YUNAlbem,
   ], //21
   [
     maxscore,
@@ -436,6 +505,7 @@ export const slot = [
     '우리 같이 영원을 꿈꾸자',
     '백년해로',
     '선우정아',
+    EternityAlbem,
   ],
   [
     runningwoman,
@@ -446,6 +516,7 @@ export const slot = [
     '내가 봐도 내가 좀 끝내주잖아 네가 나라도 이 몸이 부럽잖아',
     '내가 제일 잘 나가',
     '2NE1',
+    NE1Albem,
   ],
   [
     graduate,
@@ -456,6 +527,7 @@ export const slot = [
     '함께했던 시간은 이젠 추억으로 남기고 서로 가야 할 길 찾아서 떠나야 해요',
     '졸업',
     '올티',
+    OlltiiAlbem,
   ],
   [
     runningwoman,
@@ -466,6 +538,7 @@ export const slot = [
     '새로운 시작은 늘 설레게 하지 모든 걸 이겨낼 것처럼',
     '시작',
     '가호',
+    Gaho,
   ],
   [
     runningwoman,
@@ -476,6 +549,7 @@ export const slot = [
     '새로운 시작은 늘 설레게 하지 모든 걸 이겨낼 것처럼',
     '시작',
     '가호',
+    Gaho,
   ],
   [
     sakura,
@@ -486,6 +560,7 @@ export const slot = [
     '젊고 아름다운 당신의 계절 여길 봐 예쁘게 피었으니까',
     '꽃길',
     '세정',
+    SejeongAlbem,
   ],
   [
     sakura,
@@ -496,6 +571,7 @@ export const slot = [
     '젊고 아름다운 당신의 계절 여길 봐 예쁘게 피었으니까',
     '꽃길',
     '세정',
+    SejeongAlbem,
   ],
   [
     clova,
@@ -506,6 +582,7 @@ export const slot = [
     '웬만하면 크게 웃고 다시 시작해봐 오늘은 좋은일이 있을거야',
     '좋은일이 있을거야',
     '제이레빗',
+    JRabbitAlbem,
   ],
   [
     clova,
@@ -516,6 +593,7 @@ export const slot = [
     '웬만하면 크게 웃고 다시 시작해봐 오늘은 좋은일이 있을거야',
     '좋은일이 있을거야',
     '제이레빗',
+    JRabbitAlbem,
   ], //30
   [
     happy2,
@@ -526,6 +604,7 @@ export const slot = [
     '이렇게 나는 떠나네 더 넓은 세상으로',
     '출발',
     '김동률',
+    StartAlbem,
   ], //31
   [
     happy2,
@@ -536,6 +615,7 @@ export const slot = [
     '이렇게 나는 떠나네 더 넓은 세상으로',
     '출발',
     '김동률',
+    StartAlbem,
   ],
   [
     happy1,
@@ -546,6 +626,7 @@ export const slot = [
     '반드시 웃는다 웃는다',
     '반드시 웃는다',
     '데이식스',
+    DaySixAlbem,
   ],
   [
     happy1,
@@ -556,6 +637,7 @@ export const slot = [
     '반드시 웃는다 웃는다',
     '반드시 웃는다',
     '데이식스',
+    DaySixAlbem,
   ],
   [
     celebration,
@@ -566,6 +648,7 @@ export const slot = [
     '꿈꾸던 시간이 마치 오늘인 것만 같아 맘이 두근거리다 심장이 쿵 떨어져',
     '팡파레',
     '다비치',
+    FanfareAlbem,
   ],
   [
     celebration,
@@ -576,6 +659,7 @@ export const slot = [
     '꿈꾸던 시간이 마치 오늘인 것만 같아 맘이 두근거리다 심장이 쿵 떨어져',
     '팡파레',
     '다비치',
+    FanfareAlbem,
   ],
   [
     purpledevil,
@@ -586,6 +670,7 @@ export const slot = [
     '괜찮아 잘 될거야 너에겐 눈부신 미래가 있어 후회없이만 산다면 그것이 Super Star',
     '슈퍼스타',
     '이한철',
+    SuperStarAlbem,
   ],
   [
     purpledevil,
@@ -596,6 +681,7 @@ export const slot = [
     '괜찮아 잘 될거야 너에겐 눈부신 미래가 있어 후회없이만 산다면 그것이 Super Star',
     '슈퍼스타',
     '이한철',
+    SuperStarAlbem,
   ],
   [
     ear,
@@ -606,6 +692,7 @@ export const slot = [
     '무엇이든 상상하기만하면 이루어진다 로또는 비교도 안될 성공이',
     '듣기만 해도 성공하는 음악',
     '조빈',
+    Zobin,
   ],
   [
     ear,
@@ -616,6 +703,7 @@ export const slot = [
     '무엇이든 상상하기만하면 이루어진다 로또는 비교도 안될 성공이',
     '듣기만 해도 성공하는 음악',
     '조빈',
+    Zobin,
   ],
   [
     gini,
@@ -626,6 +714,7 @@ export const slot = [
     '이루리 이루리 La 모두 다 이뤄질 거야',
     '이루리',
     '우주소녀',
+    WJSNAlbem,
   ],
   [
     gini,
@@ -636,6 +725,7 @@ export const slot = [
     '시간은 충분해 조급해하지마 Trust yourself 너 포기하지마',
     'Dream Girls',
     '아이오아이',
+    IOIAlbem,
   ],
   [
     kite,
@@ -646,9 +736,20 @@ export const slot = [
     '새해 복만으로도 돼 절대 잘 하지 마 (돼) 열심히 하지 마 (돼)',
     '새해 복',
     '장기하와 얼굴들',
+    KihaAlbem,
   ],
 
-  [chick, babyRight, luckyCategory, '행운', 'Fly', '새롭게 펼쳐봐 또 날아봐 이제', '날개', '태연'],
+  [
+    chick,
+    babyRight,
+    luckyCategory,
+    '행운',
+    'Fly',
+    '새롭게 펼쳐봐 또 날아봐 이제',
+    '날개',
+    '태연',
+    FlyAlbem,
+  ],
   [
     gini,
     starRight,
@@ -658,6 +759,7 @@ export const slot = [
     '나를 지켜줄 거야 아껴왔던 작은 사랑도',
     'Dreams Come True',
     'Aespa',
+    AespaAlbem,
   ],
   [
     clap,
@@ -668,6 +770,7 @@ export const slot = [
     '외로운 날들이여 모두 다 안녕 내 마음속의 눈물들도 이제는 안녕 Oh',
     '안녕',
     '조이',
+    JoyAlbem,
   ],
   [
     sakura,
@@ -678,6 +781,7 @@ export const slot = [
     '꽃 피울 때까지 그곳에 좀 더 머물러줘',
     '봄날',
     'BTS',
+    BTSAlbem,
   ],
   [
     soon,
@@ -688,6 +792,7 @@ export const slot = [
     '아름답잖아. 지금 이대로. 난 괜찮은 거야',
     'COOL',
     '위키미키',
+    WikiMiki,
   ],
 ];
 
