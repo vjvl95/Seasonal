@@ -65,9 +65,10 @@ const StartContaier = styled.div`
 `;
 const InputBox = styled.input`
   width: 250px;
-  height: 150px;
+  height: 50px;
   border-radius: 50px;
   margin-top: 30px;
-  font-weight: 1000;
+  font-weight: 500;
+  font-size: 30px;
   text-align: center;
 `;
