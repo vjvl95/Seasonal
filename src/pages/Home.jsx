@@ -1,5 +1,4 @@
 import BlackBox from 'component/common/BlackBox';
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import emoticon from '../img/emoticon.png';
@@ -21,8 +20,13 @@ export default function Home() {
         </SubTitle>
         <StartContaier>
           <div>
-            <img src={emoticon} width='100px' alt='' />
-            <img src={calendar} width='50px' alt='' />
+            <img src={emoticon} style={{ marginTop: '30px' }} width='100px' alt='' />
+            <img
+              src={calendar}
+              style={{ marginLeft: '50px', paddingBottom: '90px' }}
+              width='50px'
+              alt=''
+            />
           </div>
           <NavLink to='name'>
             <StartButton>시작하기</StartButton>
