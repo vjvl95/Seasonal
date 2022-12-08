@@ -1,6 +1,7 @@
-import { Navigate, Route, Routes, Outlet } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Layout from '../layouts/Layout';
-import { Home, Name, Category, SlotMachine, Test } from '../pages';
+import WithoutTopBottom from 'layouts/WithoutTopBottom';
+import { Home, Name, Category, SlotMachine, Result } from '../pages';
 export default function index() {
   return (
     <Routes>
@@ -9,10 +10,10 @@ export default function index() {
         <Route path='/name' element={<Name />} />
         <Route path='/selectCategory' element={<Category />} />
         <Route path='/slotMachine' element={<SlotMachine />} />
-        <Route path='/result/:id' element={<Category />} />
-        {/* <Route path='/test' element={<Test />} />
-        <Route path='/test/slice' element={<SliceTest />} />
-        <Route path='/write' element={<Editor />} /> */}
+      </Route>
+
+      <Route path='/' element={<WithoutTopBottom />}>
+        <Route path='/result/:id' element={<Result />} />
       </Route>
     </Routes>
   );
