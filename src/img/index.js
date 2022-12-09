@@ -99,6 +99,7 @@ export { default as loveBackground } from './backGround/loveBackground.png';
 export { default as workBackground } from './backGround/workBackground.png';
 export { default as luckyBackground } from './backGround/luckyBackground.png';
 export { default as studyBackground } from './backGround/studyBackground.png';
+export { default as baseBackground } from './backGround/baseBackground.png';
 
 export { default as Gaho } from './albem/9_시작_가호.JPG';
 export { default as NewYear } from './albem/8_새해복_장기하와얼굴들.JPG';
@@ -145,3 +146,4 @@ export { default as FlyAlbem } from './albem/14_날개_태연.JPG';
 export { default as NE1Albem } from './albem/13_내가제일잘나가_2NE1.JPG';
 export { default as SejeongAlbem } from './albem/12_꽃길_세정.JPG';
 export { default as SS501Albem } from './albem/10_애인만들기_ss501.JPG';
+export { default as backgroundClova } from '../img/backGround/clova.png';
