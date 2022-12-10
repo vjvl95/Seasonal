@@ -1,6 +1,6 @@
 import BlackBox from 'component/common/BlackBox';
 import { NavLink, useLocation } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { useEffect, useState } from 'react';
 import { data } from '../component/common/const';
 
@@ -20,12 +20,12 @@ export default function Category() {
         <BlackBox>어떤 운세를 원하시나요?</BlackBox>
 
         <FlexBox onChange={(e) => setCategory(e.target.value)}>
-          <FlexItem>
+          <FlexItem margin={'25px'}>
             {data.map((v) => {
               return (
                 <span key={v[0]}>
                   <HiddenRadioButton id={v[0]} type='radio' name='category' value={v[2]} />
-                  <RadioButton htmlFor={v[0]}>{v[1] + v[2]}</RadioButton>
+                  <RadioButton htmlFor={v[0]}>{v[1] + ' ' + v[2]}</RadioButton>
                 </span>
               );
             })}
@@ -33,7 +33,7 @@ export default function Category() {
         </FlexBox>
         <div style={{ textAlign: 'center' }}>
           <NavLink to='/slotMachine' state={{ category: category, name: name }}>
-            <StartButton>다음</StartButton>
+            <StartButton category={category}>다음</StartButton>
           </NavLink>
         </div>
       </Background>
@@ -42,78 +42,69 @@ export default function Category() {
 }
 
 const Background = styled.div`
-  padding-top: 10%;
-  width: 100%;
-  box-shadow: 0px -4px 10px rgba(0, 165, 85, 0.1);
-  border-radius: 125px 125px 0px 0px;
+  min-height: 812px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
-  @media screen and (max-width: 601px) {
-    border-radius: 125px 125px 0px 0px;
-    padding-top: 15%;
+  @media screen and (min-width: 801px) {
+    padding-top: 34.1%;
   }
 `;
 const StartButton = styled.button`
-  width: 190px;
+  width: 184px;
   height: 64px;
-  font-size: 20px;
+  font-size: 14px;
   display: inline-block;
-  background: #00c981;
   border-radius: 100px;
-  margin-top: 30px;
   text-align: center;
-  line-height: 55px;
+  line-height: 17.5px;
+  margin-top: 30px;
   color: white;
   font-weight: 800;
-  border: none;
-
-  &:disabled {
-    background: gray;
-    border: 3px solid;
-    /* &:hover {
-      background:
-      border: 3px solid 
-      cursor: not-allowed;
-    } */
-  }
+  background: #00c981;
+  border: 0px solid;
+  backdrop-filter: blur(2.5px);
+  ${(props) =>
+    props.category &&
+    css`
+      &:disabled {
+        background: gray;
+        border: 3px solid;
+      }
+    `};
 `;
 const FlexItem = styled.div`
-  width: 80%;
   margin-left: ${(props) => props.margin};
+  @media screen and (min-width: 801px) {
+    margin-left: 0px;
+    width: 50%;
+  }
 `;
 const FlexBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: 601px) {
-    margin-top: 30px;
-    padding-left: 50px;
-    margin-bottom: 20px;
-  }
 `;
 
 const RadioButton = styled.label`
   display: inline-block;
-  width: 40%;
-  height: 3rem;
-  border-radius: 20px;
-  background-color: white;
-  border: 2px solid #a5f7ce;
+  width: 140px;
+  height: 82px;
+  border: 1px solid #bcecd3;
+  border-radius: 10px;
   text-align: center;
+  font-weight: 700;
   margin: 0.8rem;
-  line-height: 3rem;
-  box-shadow: rgba(165, 247, 206, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  line-height: 70px;
+  box-shadow: 0px -10px 3px 1px #a3f1ca inset;
   cursor: pointer;
-  @media screen and (min-width: 601px) {
-  }
 `;
 const HiddenRadioButton = styled.input`
   display: none;
   &:checked + ${RadioButton} {
-    transition: 0.5s;
-    transform: scale(1.2);
-    background-color: rgba(165, 247, 206, 0.5);
+    box-shadow: 0px 0px 0px 0px #a3f1ca inset;
+
+    background-color: #00c981;
+    color: white;
   }
 `;

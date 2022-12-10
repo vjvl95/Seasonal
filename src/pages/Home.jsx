@@ -3,81 +3,81 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import emoticon from '../img/emoticon.png';
 import calendar from '../img/calendar.png';
-
+import { backgroundClova } from 'img';
 export default function Home() {
   return (
     <>
       <Background>
-        <BlackBox>
-          2023년
-          <br />
-          ♪새해 첫 곡 럭키 슬롯♪
-        </BlackBox>
+        <Year>2023</Year>
+        <BlackBox>♪새해 첫 곡 럭키 슬롯♪</BlackBox>
         <SubTitle>
           당신에게 행운을 가져다 줄 새해 첫 곡,
           <br />
           럭키 슬롯에서 뽑아보세요!
         </SubTitle>
-        <StartContaier>
-          <div>
-            <img src={emoticon} style={{ marginTop: '30px' }} width='100px' alt='' />
-            <img
-              src={calendar}
-              style={{ marginLeft: '50px', paddingBottom: '90px' }}
-              width='50px'
-              alt=''
-            />
-          </div>
-          <NavLink to='name'>
-            <StartButton>시작하기</StartButton>
-          </NavLink>
-        </StartContaier>
+        <div>
+          <img src={emoticon} style={{ marginTop: '50px' }} width='100px' alt='' />
+          <img
+            src={calendar}
+            style={{ marginLeft: '25px', paddingBottom: '130px' }}
+            width='50px'
+            alt=''
+          />
+        </div>
+        <NavLink to='name'>
+          <StartButton>시작하기</StartButton>
+        </NavLink>
+        <img src={backgroundClova} alt=''></img>
       </Background>
     </>
   );
 }
 
 const Background = styled.div`
-  padding-top: 10%;
-  width: 100%;
-  box-shadow: 0px -4px 10px rgba(0, 165, 85, 0.1);
-  border-radius: 125px 125px 0px 0px;
+  min-height: 812px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (max-width: 601px) {
-    border-radius: 125px 125px 0px 0px;
-    padding-top: 15%;
+`;
+const Year = styled.div`
+  font-family: Happiness Sans;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #00c981;
+  text-align: center;
+  margin-top: 120px;
+  @media screen and (min-width: 801px) {
+    margin-top: 30%;
   }
 `;
-
 const SubTitle = styled.div`
-  margin-top: 40px;
+  width: 330px;
+  height: 56px;
   display: flex;
   justify-content: center;
   text-align: center;
-  line-height: 23px;
+  font-family: Happiness Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  margin-top: 2rem;
 `;
 
 const StartButton = styled.div`
-  width: 190px;
+  width: 180px;
   height: 64px;
   display: inline-block;
   background: #00c981;
   backdrop-filter: blur(2.5px);
   border-radius: 100px;
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
   line-height: 55px;
   color: white;
   font-weight: 800;
-`;
-const StartContaier = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+  margin-bottom: 40px;
 `;
