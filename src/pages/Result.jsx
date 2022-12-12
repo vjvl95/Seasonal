@@ -13,7 +13,9 @@ import findSlot from 'util/findSlot';
 export default function Result() {
   const location = useLocation();
   const { state } = location;
+  console.log(location.pathname);
   const slot = !state && findSlot(location.pathname);
+  console.log(slot);
   const backGroundIMG = selectBackGround(state?.slot[3] || slot[3]);
   const [isClicked, setIsClicked] = useState(false);
   const [isOpenModel, setIsOpenModel] = useState(false);

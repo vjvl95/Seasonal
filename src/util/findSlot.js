@@ -1,8 +1,8 @@
 import { slot } from 'component/common/const';
 
 export default function findSlot(pathname) {
-  const findName = pathname.split('/')[1];
-  console.log(slot);
+  const findName = pathname.split('/')[2];
+  console.log(findName);
   const returnArr = slot
     // eslint-disable-next-line array-callback-return
     .map((v) => {
