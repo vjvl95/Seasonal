@@ -145,6 +145,54 @@ import {
   FlyAlbem,
 } from '../../img';
 
+import {
+  SS501Meme,
+  TwoentyThiryMeme,
+  FlowerRoadMeme,
+  NE1Meme,
+  FlyMeme,
+  KihaMeme,
+  NoSmokingMeme,
+  AespaMeme,
+  JoyMeme,
+  OlltiiMeme,
+  DelegationMeme,
+  SeeYaMeme,
+  AMMeme,
+  MightyMouthMeme,
+  WheeSungMeme,
+  BTSMeme,
+  MeloManceMeme,
+  YUNMeme,
+  PinkfloyedMeme,
+  GunnyMeme,
+  BlockBMeme,
+  IZONEMeme,
+  IUMeme,
+  NCT127Meme,
+  SeventeenMeme,
+  BlackPinkMeme,
+  SOMDEFMeme,
+  SoranMeme,
+  JRabbitMeme,
+  StartMeme,
+  DaySixMeme,
+  SuperStarMeme,
+  WikiMikiMeme,
+  SinceMeme,
+  EXOMeme,
+  NewYearMeme,
+  EternityMeme,
+  TwiceMeme,
+  ZobinMeme,
+  IOIMeme,
+  WJSNMeme,
+  RedVelvetMeme,
+  GahoMeme,
+  FanfareMeme,
+  LESSERAFIMMeme,
+} from '../../img';
+
 export const imgFileLeft = [
   qustion,
   champagne,
@@ -249,6 +297,7 @@ export const slot = [
     'Alcohol-Free',
     '트와이스',
     TwiceAlbem,
+    TwiceMeme,
   ],
   [
     lightning,
@@ -260,6 +309,7 @@ export const slot = [
     'Energy',
     '마이티마우스',
     MightyMouthAlbem,
+    MightyMouthMeme,
   ],
   [
     health2,
@@ -271,6 +321,7 @@ export const slot = [
     '운동하자',
     '건이',
     GunnyAlbem,
+    GunnyMeme,
   ],
   [
     baby,
@@ -282,6 +333,7 @@ export const slot = [
     'Forever Young',
     '블랙핑크',
     BlackPinkAlbem,
+    BlackPinkMeme,
   ],
   [
     power,
@@ -293,6 +345,7 @@ export const slot = [
     'antifragile',
     '르세라핌',
     LESSERAFIMAlbem,
+    LESSERAFIMMeme,
   ],
   [
     thumb,
@@ -304,6 +357,7 @@ export const slot = [
     'all good',
     '썸데프',
     SOMDEFAlbem,
+    SOMDEFMeme,
   ],
   [
     power,
@@ -315,6 +369,7 @@ export const slot = [
     '준비된어깨',
     '소란',
     SoranAlbem,
+    SOMDEFMeme,
   ],
   [
     nosmoking,
@@ -326,18 +381,21 @@ export const slot = [
     '금연',
     '건아들',
     NoSmokingAlbem,
+    NoSmokingMeme,
   ],
+
   [
     money,
-    lightningRight,
+    circus,
     moneyCategory,
     '재물운',
-    'JackPot',
-    '지갑에도 가득. 통장에도 가득 돈벼락 쏟아진다',
-    '돈벼락',
-    '김필',
+    'Lotto',
+    'I just hit the lotto',
+    'Lotto',
+    'EXO',
+    EXO,
+    EXOMeme,
   ],
-  [money, circus, moneyCategory, '재물운', 'Lotto', 'I just hit the lotto', 'Lotto', 'EXO', EXO],
   [
     moneyface,
     money,
@@ -348,6 +406,7 @@ export const slot = [
     'money',
     'Pink Floyd',
     PinkfloyedAlbem,
+    PinkfloyedMeme,
   ],
   [
     slotmachine,
@@ -359,6 +418,7 @@ export const slot = [
     'jackpot',
     '블락비',
     BlockBAlbem,
+    BlockBMeme,
   ],
   [
     newyear,
@@ -370,6 +430,7 @@ export const slot = [
     'fiesta',
     '아이즈원',
     IZONEAlbem,
+    IZONEMeme,
   ],
   [
     oksing,
@@ -381,6 +442,7 @@ export const slot = [
     'coin',
     '아이유',
     IUAlbem,
+    IUMeme,
   ],
   [
     lucky,
@@ -392,6 +454,7 @@ export const slot = [
     'dreams come true',
     'NCT127',
     NCT127Albem,
+    NCT127Meme,
   ],
 
   //10
@@ -405,6 +468,7 @@ export const slot = [
     'SIGN',
     'SINCE',
     Since,
+    SinceMeme,
   ],
   [
     paper,
@@ -416,6 +480,7 @@ export const slot = [
     'SIGN',
     'SINCE',
     Since,
+    SinceMeme,
   ],
 
   [
@@ -428,6 +493,7 @@ export const slot = [
     '행복 (Happiness)',
     '	레드벨벳',
     RedVelvetAlbem,
+    RedVelvetMeme,
   ],
   [
     love,
@@ -439,6 +505,7 @@ export const slot = [
     "In Love's Time",
     'the delegation',
     DelegationAlbem,
+    DelegationMeme,
   ],
   [
     ring,
@@ -450,6 +517,7 @@ export const slot = [
     '결혼할까요',
     '씨야',
     SeeYaAlbem,
+    SeeYaMeme,
   ],
   [
     love,
@@ -461,6 +529,7 @@ export const slot = [
     '친구의 고백',
     '2AM',
     AMAlbem,
+    AMMeme,
   ],
   [
     love,
@@ -472,6 +541,7 @@ export const slot = [
     '사랑은 맛있다♡',
     '휘성',
     WheeSungAlbem,
+    WheeSungMeme,
   ],
   [
     gift,
@@ -483,6 +553,7 @@ export const slot = [
     '선물',
     '멜로망스',
     MeloManceAlbem,
+    MeloManceMeme,
   ],
   //20
   [
@@ -495,6 +566,7 @@ export const slot = [
     '신혼일기',
     '윤딴딴',
     YUNAlbem,
+    YUNMeme,
   ], //21
   [
     maxscore,
@@ -506,6 +578,7 @@ export const slot = [
     '백년해로',
     '선우정아',
     EternityAlbem,
+    EternityMeme,
   ],
   [
     runningwoman,
@@ -517,6 +590,7 @@ export const slot = [
     '내가 제일 잘 나가',
     '2NE1',
     NE1Albem,
+    NE1Meme,
   ],
   [
     graduate,
@@ -528,6 +602,7 @@ export const slot = [
     '졸업',
     '올티',
     OlltiiAlbem,
+    OlltiiMeme,
   ],
   [
     runningwoman,
@@ -539,6 +614,7 @@ export const slot = [
     '시작',
     '가호',
     Gaho,
+    GahoMeme,
   ],
   [
     runningwoman,
@@ -550,6 +626,7 @@ export const slot = [
     '시작',
     '가호',
     Gaho,
+    GahoMeme,
   ],
   [
     sakura,
@@ -561,6 +638,7 @@ export const slot = [
     '꽃길',
     '세정',
     SejeongAlbem,
+    FlowerRoadMeme,
   ],
   [
     sakura,
@@ -572,6 +650,7 @@ export const slot = [
     '꽃길',
     '세정',
     SejeongAlbem,
+    FlowerRoadMeme,
   ],
   [
     clova,
@@ -583,6 +662,7 @@ export const slot = [
     '좋은일이 있을거야',
     '제이레빗',
     JRabbitAlbem,
+    JRabbitMeme,
   ],
   [
     clova,
@@ -594,6 +674,7 @@ export const slot = [
     '좋은일이 있을거야',
     '제이레빗',
     JRabbitAlbem,
+    JRabbitMeme,
   ], //30
   [
     happy2,
@@ -605,6 +686,7 @@ export const slot = [
     '출발',
     '김동률',
     StartAlbem,
+    StartMeme,
   ], //31
   [
     happy2,
@@ -616,6 +698,7 @@ export const slot = [
     '출발',
     '김동률',
     StartAlbem,
+    StartMeme,
   ],
   [
     happy1,
@@ -627,6 +710,7 @@ export const slot = [
     '반드시 웃는다',
     '데이식스',
     DaySixAlbem,
+    DaySixMeme,
   ],
   [
     happy1,
@@ -638,6 +722,7 @@ export const slot = [
     '반드시 웃는다',
     '데이식스',
     DaySixAlbem,
+    DaySixMeme,
   ],
   [
     celebration,
@@ -649,6 +734,7 @@ export const slot = [
     '팡파레',
     '다비치',
     FanfareAlbem,
+    FanfareMeme,
   ],
   [
     celebration,
@@ -660,6 +746,7 @@ export const slot = [
     '팡파레',
     '다비치',
     FanfareAlbem,
+    FanfareMeme,
   ],
   [
     purpledevil,
@@ -671,6 +758,7 @@ export const slot = [
     '슈퍼스타',
     '이한철',
     SuperStarAlbem,
+    SuperStarMeme,
   ],
   [
     purpledevil,
@@ -682,6 +770,7 @@ export const slot = [
     '슈퍼스타',
     '이한철',
     SuperStarAlbem,
+    SuperStarMeme,
   ],
   [
     ear,
@@ -693,6 +782,7 @@ export const slot = [
     '듣기만 해도 성공하는 음악',
     '조빈',
     Zobin,
+    ZobinMeme,
   ],
   [
     ear,
@@ -704,6 +794,7 @@ export const slot = [
     '듣기만 해도 성공하는 음악',
     '조빈',
     Zobin,
+    ZobinMeme,
   ],
   [
     gini,
@@ -715,6 +806,7 @@ export const slot = [
     '이루리',
     '우주소녀',
     WJSNAlbem,
+    WJSNMeme,
   ],
   [
     gini,
@@ -726,6 +818,7 @@ export const slot = [
     'Dream Girls',
     '아이오아이',
     IOIAlbem,
+    IOIMeme,
   ],
   [
     kite,
@@ -737,6 +830,7 @@ export const slot = [
     '새해 복',
     '장기하와 얼굴들',
     KihaAlbem,
+    KihaMeme,
   ],
 
   [
@@ -749,6 +843,7 @@ export const slot = [
     '날개',
     '태연',
     FlyAlbem,
+    FlyMeme,
   ],
   [
     gini,
@@ -760,6 +855,7 @@ export const slot = [
     'Dreams Come True',
     'Aespa',
     AespaAlbem,
+    AespaMeme,
   ],
   [
     clap,
@@ -771,6 +867,7 @@ export const slot = [
     '안녕',
     '조이',
     JoyAlbem,
+    JoyMeme,
   ],
   [
     sakura,
@@ -782,6 +879,7 @@ export const slot = [
     '봄날',
     'BTS',
     BTSAlbem,
+    BTSMeme,
   ],
   [
     soon,
@@ -793,6 +891,7 @@ export const slot = [
     'COOL',
     '위키미키',
     WikiMiki,
+    WikiMikiMeme,
   ],
 ];
 
