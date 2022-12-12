@@ -4,9 +4,8 @@ export default function findIndex(selectCategory) {
   const select = slot.filter((v) => {
     if (v[3] === selectCategory) return v;
   });
-  console.log(select);
+
   const randomNumber = Math.trunc(Math.random() * select.length);
-  console.log(randomNumber);
   const slotIndex = slot
     .map((v, i) => {
       if (
@@ -31,6 +30,5 @@ export default function findIndex(selectCategory) {
       }
     })
     .filter((v) => v !== undefined);
-  console.log(index);
   return [...index, slotIndex[0]];
 }
