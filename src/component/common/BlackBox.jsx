@@ -11,7 +11,7 @@ const Title = styled.div`
   display: ${({ isFlex }) => (isFlex ? 'flex' : '')};
   justify-content: center;
   align-items: center;
-  font-family: DOSGothic;
+  font-family: 'DOSGothic';
   font-size: ${({ fontSize }) => fontSize};
   font-weight: 500;
   width: 330.5px;
@@ -25,6 +25,6 @@ const Title = styled.div`
   padding-top: ${({ paddingTop }) => paddingTop};
   margin-top: ${({ marginTop }) => marginTop};
   @media screen and (min-width: 801px) {
-    width: 60%;
+    width: 80%;
   }
 `;

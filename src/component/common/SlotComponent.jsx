@@ -1,21 +1,20 @@
-import { useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { imgFileLeft, imgFileRight, category } from './const';
 export default function SlotComponent({ slotIndex, isClick, selectCategory }) {
   return (
     <>
       <FlexBox>
-        <FirstLetter number={slotIndex[0]} end={-40} isClicked={isClick}>
+        <FirstLetter number={slotIndex[0]} isClicked={isClick}>
           {imgFileLeft.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </FirstLetter>
-        <SecondLetter number={slotIndex[1]} end={-46} isClicked={isClick}>
+        <SecondLetter number={slotIndex[1]} isClicked={isClick}>
           {imgFileRight.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </SecondLetter>
-        <ThridLetter number={slotIndex[2]} end={-7} isClicked={isClick}>
+        <ThridLetter number={slotIndex[2]} isClicked={isClick}>
           {category.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
@@ -49,9 +48,10 @@ const FirstLetter = styled.div`
   flex-direction: column;
   height: 50px;
   overflow: hidden;
+
   box-sizing: border-box;
   margin-right: 2.5rem;
-  --end: ${(props) => props.end};
+  --end: -40;
   --a: ${(props) => props.number};
 
   ${(props) =>
@@ -67,10 +67,10 @@ const SecondLetter = styled.div`
   flex-direction: column;
   height: 50px;
   color: blue;
-  overflow: hidden;
   box-sizing: border-box;
+  overflow: hidden;
   margin-right: 2.5rem;
-  --end: ${(props) => props.end};
+  --end: -46;
   --a: ${(props) => props.number};
   ${(props) =>
     props.isClicked &&
@@ -86,10 +86,11 @@ const ThridLetter = styled.div`
   flex-direction: column;
   height: 50px;
   overflow: hidden;
+
   span {
     font-size: 30px;
   }
-  --end: ${(props) => props.end};
+  --end: -7;
   --a: ${(props) => props.number};
   ${(props) =>
     props.isClicked &&
@@ -101,14 +102,14 @@ const ThridLetter = styled.div`
 `;
 
 const FlexBox = styled.div`
-  height: 150px;
-  width: 300px;
+  height: 140px;
+  width: 344px;
   margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 10px 10px 40px rgba(0, 165, 85, 0.1);
   border-radius: 100px;
-  border: 1px solid rgba(0, 165, 85, 0.1);
+  border: 1.5px solid #bcecd3;
   margin-bottom: 15px;
 `;
