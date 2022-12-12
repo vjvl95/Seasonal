@@ -1,12 +1,14 @@
 import { imgFileLeft, imgFileRight, category, slot } from 'component/common/const';
 
 export default function findIndex(selectCategory) {
+  // eslint-disable-next-line array-callback-return
   const select = slot.filter((v) => {
     if (v[3] === selectCategory) return v;
   });
 
   const randomNumber = Math.trunc(Math.random() * select.length);
   const slotIndex = slot
+    // eslint-disable-next-line array-callback-return
     .map((v, i) => {
       if (
         select[randomNumber][0] === v[0] &&
@@ -18,6 +20,7 @@ export default function findIndex(selectCategory) {
     })
     .filter((v) => v !== undefined);
   const index = slot[slotIndex[0]]
+    // eslint-disable-next-line array-callback-return
     .map((v, i) => {
       if (i === 0) {
         return -imgFileLeft.indexOf(v);
