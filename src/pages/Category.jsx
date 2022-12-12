@@ -1,14 +1,14 @@
 import BlackBox from 'component/common/BlackBox';
 import { NavLink, useLocation } from 'react-router-dom';
-import styled, { css } from 'styled-components';
-import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { useState } from 'react';
 import { data } from '../component/common/const';
 
 export default function Category() {
   const location = useLocation();
   const { state } = location;
   const [category, setCategory] = useState('');
-  const [name, setName] = useState(state.name);
+  const [name] = useState(state.name);
   const [isClicked, setIsClicked] = useState(false);
 
   return (
