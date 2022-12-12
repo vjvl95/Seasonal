@@ -9,3 +9,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+@font-face {
+  font-family: 'happinessSans';
+  src: url('./font/Happiness-Sans-Regular.woff');
+}
+@font-face {
+  font-family: 'DOSGothic';
+  src: url('./font/DOSGothic.ttf');
+}
