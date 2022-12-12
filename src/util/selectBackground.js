@@ -19,7 +19,7 @@ export default function selectBackGround(category) {
     case '행운':
       return [luckyBackground, 'red'];
     case '직장운':
-      return [studyBackground, ''];
+      return [studyBackground, 'skyblue'];
     default:
   }
 }
