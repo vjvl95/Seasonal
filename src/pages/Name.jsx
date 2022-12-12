@@ -14,7 +14,11 @@ export default function Name() {
         <StartContaier>
           <InputBox value={name} onChange={(e) => setName(e.target.value)}></InputBox>
           <NavLink to='/selectCategory' state={{ name: name }}>
-            <StartButton disabled={!isVaildName}>다음</StartButton>
+            {isVaildName ? (
+              <StartButton disabled={!isVaildName}>다음</StartButton>
+            ) : (
+              <StartButton disabled={!isVaildName}>이름을 입력해주세요</StartButton>
+            )}
           </NavLink>
         </StartContaier>
       </Background>
@@ -24,11 +28,12 @@ export default function Name() {
 
 const Background = styled.div`
   min-height: 812px;
-
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 37%;
+
   @media screen and (min-width: 801px) {
     padding-top: 34.1%;
   }

@@ -1,19 +1,29 @@
 import BlackBox from 'component/common/BlackBox';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { NavLink, useLocation } from 'react-router-dom';
 import selectBackGround from 'util/selectBackground';
 import { useState } from 'react';
+import HomeButton from '../img/HomeButton.png';
+import SNSButton from '../img/shareButton.png';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+
+import { FacebookShareButton, FacebookIcon, TwitterIcon, TwitterShareButton } from 'react-share';
 export default function Result() {
   const location = useLocation();
   const { state } = location;
   const backGroundIMG = selectBackGround(state.slot[3]);
   const [isClicked, setIsClicked] = useState(false);
+  const [isOpenModel, setIsOpenModel] = useState(false);
+  const currentUrl = window.location.href;
+
   return (
     <>
       <Background back={backGroundIMG[0]}>
-        <BlackBox>
-          {state.name} 님의 <br />
-          새해 첫 곡을 찾아줄 럭키 슬롯
+        <BlackBox isFlex={false} paddingTop={'15px'}>
+          <>
+            <span style={{ fontWeight: '700' }}>{state.name}</span> 님의 <br />
+            새해 첫 곡을 찾아줄 럭키 슬롯
+          </>
         </BlackBox>
         <AlbumBox isClicked={isClicked}>
           <Front>
@@ -29,15 +39,88 @@ export default function Result() {
         <StartButton onClick={() => setIsClicked(!isClicked)}>
           {isClicked ? '카드 뒤집어서 노래 보기' : '카드 뒤집어서 짤 보기'}
         </StartButton>
+        <Box>
+          <InnerBox>
+            <img onClick={() => setIsOpenModel(!isOpenModel)} src={SNSButton} width='48px' alt='' />
+            <span style={{ marginTop: '5px' }}>SNS 공유</span>
+          </InnerBox>
+          <NavLink
+            style={{ display: 'block', color: '#00c981', textDecorationLine: 'none' }}
+            to={'/'}
+          >
+            <InnerBox>
+              <img src={HomeButton} width='48px' alt='' />
+              <span style={{ marginTop: '5px' }}>다시 하기</span>
+            </InnerBox>
+          </NavLink>
+        </Box>
+        {isOpenModel && (
+          <Model>
+            <SnsBox>
+              <FacebookShareButton url={currentUrl}>
+                <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
+              </FacebookShareButton>
+              <TwitterShareButton url={currentUrl}>
+                <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
+              </TwitterShareButton>
+              <CopyToClipboard text={currentUrl}>
+                <URLShareButton>URL</URLShareButton>
+              </CopyToClipboard>
+              <button>4</button>
+            </SnsBox>
+          </Model>
+        )}
       </Background>
     </>
   );
 }
+
+const URLShareButton = styled.button`
+  width: 48px;
+  height: 48px;
+  color: white;
+  border-radius: 24px;
+  border: 0px;
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #7362ff;
+`;
+const SnsBox = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 48px);
+  grid-column-gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+const InnerBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #00c981;
+`;
+const Model = styled.div`
+  padding-top: 10px;
+  background-color: #d1fceb;
+  width: 300px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+`;
+const Box = styled.div`
+  display: flex;
+  gap: 30px;
+  margin-top: 5%;
+  margin-bottom: 10px;
+`;
 const BackIMG = styled.img`
   margin-top: 70px;
   max-height: 150px;
   @media screen and (min-width: 801px) {
-    max-height: 500px;
+    width: 100%;
+    max-height: none;
   }
 `;
 const Front = styled.div`
@@ -84,9 +167,8 @@ const Background = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 148px;
-  height: 100vh;
-
+  padding-top: 20%;
+  min-height: 812px;
   background-image: ${(props) => `url(${props.back})`};
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,8 +189,9 @@ const AlbumBox = styled.div`
   transform-style: preserve-3d;
 
   @media screen and (min-width: 801px) {
-    width: 400px;
-    height: 500px;
+    width: 60%;
+    height: 60%;
+    padding-top: 0px;
   }
   ${(props) =>
     props.isClicked &&

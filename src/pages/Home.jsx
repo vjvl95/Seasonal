@@ -24,7 +24,7 @@ export default function Home() {
             alt=''
           />
         </div>
-        <NavLink to='name'>
+        <NavLink style={{ textDecorationLine: 'none' }} to='name'>
           <StartButton>시작하기</StartButton>
         </NavLink>
         <img src={backgroundClova} alt=''></img>
@@ -41,17 +41,12 @@ const Background = styled.div`
   align-items: center;
 `;
 const Year = styled.div`
-  font-family: Happiness Sans;
   font-size: 16px;
   font-weight: 900;
   line-height: 28px;
-  letter-spacing: 0.1em;
   color: #00c981;
   text-align: center;
-  margin-top: 120px;
-  @media screen and (min-width: 801px) {
-    margin-top: 30%;
-  }
+  margin-top: 30%;
 `;
 const SubTitle = styled.div`
   width: 330px;
@@ -59,7 +54,6 @@ const SubTitle = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Happiness Sans;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -70,14 +64,14 @@ const SubTitle = styled.div`
 const StartButton = styled.div`
   width: 180px;
   height: 64px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #00c981;
   backdrop-filter: blur(2.5px);
   border-radius: 100px;
-  margin-top: 40px;
-  text-align: center;
-  line-height: 55px;
   color: white;
   font-weight: 800;
   margin-bottom: 40px;
+  margin-top: 20px;
 `;

@@ -9,31 +9,32 @@ export default function Category() {
   const { state } = location;
   const [category, setCategory] = useState('');
   const [name, setName] = useState(state.name);
-  useEffect(() => {
-    console.log(name);
-    console.log(category);
-  });
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <>
       <Background>
         <BlackBox>어떤 운세를 원하시나요?</BlackBox>
 
-        <FlexBox onChange={(e) => setCategory(e.target.value)}>
-          <FlexItem margin={'25px'}>
-            {data.map((v) => {
-              return (
-                <span key={v[0]}>
-                  <HiddenRadioButton id={v[0]} type='radio' name='category' value={v[2]} />
-                  <RadioButton htmlFor={v[0]}>{v[1] + ' ' + v[2]}</RadioButton>
-                </span>
-              );
-            })}
-          </FlexItem>
-        </FlexBox>
+        <FlexItem onChange={(e) => setCategory(e.target.value)}>
+          {data.map((v) => {
+            return (
+              <span key={v[0]}>
+                <HiddenRadioButton id={v[0]} type='radio' name='category' value={v[2]} />
+                <RadioButton onClick={() => setIsClicked(true)} htmlFor={v[0]}>
+                  {v[1] + ' ' + v[2]}
+                </RadioButton>
+              </span>
+            );
+          })}
+        </FlexItem>
         <div style={{ textAlign: 'center' }}>
           <NavLink to='/slotMachine' state={{ category: category, name: name }}>
-            <StartButton category={category}>다음</StartButton>
+            {isClicked ? (
+              <StartButton category={category}>다음</StartButton>
+            ) : (
+              <StartButton disabled>하나의 운세를 선택해주세요</StartButton>
+            )}
           </NavLink>
         </div>
       </Background>
@@ -46,6 +47,7 @@ const Background = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 37%;
   @media screen and (min-width: 801px) {
     padding-top: 34.1%;
   }
@@ -63,40 +65,44 @@ const StartButton = styled.button`
   font-weight: 800;
   background: #00c981;
   border: 0px solid;
-  backdrop-filter: blur(2.5px);
-  ${(props) =>
-    props.category &&
-    css`
-      &:disabled {
-        background: gray;
-        border: 3px solid;
-      }
-    `};
-`;
-const FlexItem = styled.div`
-  margin-left: ${(props) => props.margin};
-  @media screen and (min-width: 801px) {
-    margin-left: 0px;
-    width: 50%;
+
+  &:disabled {
+    background: gray;
+    font-size: 12px;
   }
 `;
-const FlexBox = styled.div`
+const FlexItem = styled.div`
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
+  margin-top: 20px;
+
+  @media screen and (min-width: 801px) {
+    width: 80%;
+    margin: 0px auto;
+  }
 `;
 
 const RadioButton = styled.label`
   display: inline-block;
-  width: 140px;
+  min-width: 150px;
+  width: 100%;
   height: 82px;
+  //margin: 10px;
   border: 1px solid #bcecd3;
   border-radius: 10px;
   text-align: center;
   font-weight: 700;
-  margin: 0.8rem;
   line-height: 70px;
+
   box-shadow: 0px -10px 3px 1px #a3f1ca inset;
+
+  @media screen and (min-width: 801px) {
+    min-width: 230px;
+  }
+
   cursor: pointer;
 `;
 const HiddenRadioButton = styled.input`
