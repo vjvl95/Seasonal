@@ -9,17 +9,17 @@ import {
 export default function selectBackGround(category) {
   switch (category) {
     case '재물운':
-      return moneyBackground;
+      return [moneyBackground, '#e9ec69'];
     case '건강운':
-      return healthyBackground;
+      return [healthyBackground, '#fbceb1'];
     case '애정운':
-      return loveBackground;
+      return [loveBackground, 'pink'];
     case '학업운':
-      return workBackground;
+      return [workBackground, 'skyblue'];
     case '행운':
-      return luckyBackground;
+      return [luckyBackground, 'red'];
     case '직장운':
-      return studyBackground;
+      return [studyBackground, ''];
     default:
   }
 }
