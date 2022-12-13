@@ -1,6 +1,8 @@
 import BlackBox from 'component/common/BlackBox';
 import { useState, useMemo } from 'react';
-import lever from '../img/lever.png';
+import lever_ball from '../img/lever_ball.png';
+import lever_bar from '../img/lever_bar.png';
+
 import resultPrint from '../img/resultPrint.png';
 import SlotMachineBox from '../component/common/SlotComponent';
 import styled, { keyframes, css } from 'styled-components';
@@ -13,6 +15,7 @@ import { useEffect } from 'react';
 export default function SlotMachine() {
   const [isClick, setIsClick] = useState(false);
   const [endAnimation, setEndAnimation] = useState(false);
+  const [leverOut, setLeverOut] = useState(false);
   const location = useLocation();
   const { state } = location;
   const slotIndex = useMemo(() => findIndex(state.category), [state]);
@@ -22,6 +25,9 @@ export default function SlotMachine() {
       setTimeout(() => {
         setEndAnimation(true);
       }, 7000);
+      setTimeout(() => {
+        setLeverOut(true);
+      }, 3000);
     }
   }, [isClick]);
 
@@ -52,8 +58,13 @@ export default function SlotMachine() {
         </SlotBox>
         <ButtonBox>
           {!isClick && <LeverText>손잡이를 내려 럭키슬롯을 돌려주세요</LeverText>}
-          <Lever isClicked={isClick} onClick={() => setIsClick(!isClick)} src={lever}></Lever>
-          {isClick && (
+
+          <Lever isClicked={isClick} onClick={() => setIsClick(!isClick)}>
+            <LeverImgBall src={lever_ball} alt='' isBall={true} isClicked={isClick} />
+
+            <LeverImgBar src={lever_bar} alt='' />
+          </Lever>
+          {isClick && leverOut && (
             <>
               <img
                 src={resultPrint}
@@ -61,7 +72,7 @@ export default function SlotMachine() {
                 width={'250px'}
                 alt=''
               />
-              <AfterButton>
+              <AfterButton isClicked={isClick} isLeverOut={leverOut}>
                 <img src={buttonEmoticon} width={'95px'} height={'108px'} alt=''></img>
                 <NavLink
                   to={`/result/${slot[slotIndex[3]][4]}`}
@@ -90,18 +101,50 @@ export default function SlotMachine() {
     </>
   );
 }
-const AfterButton = styled.div`
-  display: flex;
+
+const scroll = keyframes`
+
+to{
+  transform:translate(0px,150px)
+  }
 `;
+
 const scroll2 = keyframes`
 
-	to {
+to {
 		opacity: 0;
     visibility: hidden;
     height:0px;
 	}
 `;
 
+const scroll3 = keyframes`
+from{opacity:0}
+to {
+		opacity: 1;
+
+	}
+`;
+const LeverImgBall = styled.img`
+  position: relative;
+  top: 30px;
+  right: 5px;
+  ${(props) =>
+    props.isBall &&
+    props.isClicked &&
+    css`
+      animation: ${scroll} 3s 0s forwards;
+    `};
+`;
+const LeverImgBar = styled.img``;
+const AfterButton = styled.div`
+  display: flex;
+  ${(props) =>
+    props.isLeverOut &&
+    css`
+      animation: ${scroll3} 5s 0s linear forwards;
+    `};
+`;
 const LeverText = styled.div`
   font-weight: 400;
   font-size: 10px;
@@ -149,12 +192,12 @@ const ButtonBox = styled.div`
   align-items: center;
   flex-direction: column;
 `;
-const Lever = styled.img`
+const Lever = styled.div`
   width: 70px;
   height: 150px;
   ${(props) =>
     props.isClicked &&
     css`
-      animation: ${scroll2} 0s forwards;
+      animation: ${scroll2} 3s 0s linear forwards;
     `};
 `;
