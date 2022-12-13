@@ -13,9 +13,7 @@ import findSlot from 'util/findSlot';
 export default function Result() {
   const location = useLocation();
   const { state } = location;
-  console.log(location.pathname);
   const slot = !state && findSlot(location.pathname);
-  console.log(slot);
   const backGroundIMG = selectBackGround(state?.slot[3] || slot[3]);
   const [isClicked, setIsClicked] = useState(false);
   const [isOpenModel, setIsOpenModel] = useState(false);
@@ -33,30 +31,22 @@ export default function Result() {
 
   const handleKakaoButton = () => {
     window.Kakao.Link.sendDefault({
-      objectType: 'feed',
+      objectType: 'feed', // 카카오 링크 공유 여러 type들 중 feed라는 타입 -> 자세한 건 카카오에서 확인
       content: {
-        title: '제목을 여기에 씁니다.',
-        description: '내용을 여기에 씁니다',
-        imageUrl:
-          'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeB1Yj7%2Fbtrn8HKdp01%2FlZMtAuvo986os4dCkVoAOk%2Fimg.png',
-        imageWidth: 1200,
-        imageHeight: 630,
+        title: '새해첫곡', // 인자값으로 받은 title
+        description: '설명', // 인자값으로 받은 title
+        imageUrl: '이미지 url',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          androidExecutionParams: 'test',
+          mobileWebUrl: 'https://newyearsong2023.netlify.app', // 인자값으로 받은 route(uri 형태)
+          webUrl: 'https://newyearsong2023.netlify.app',
         },
-      },
-      itemContent: {
-        profileText: '송송',
-        profileImageUrl:
-          'https://tistory1.daumcdn.net/tistory/373748/attach/af0ef0205e234b4f9f09d7bce27dd237',
       },
       buttons: [
         {
-          title: '블로그 둘러보기',
+          title: 'title',
           link: {
-            mobileWebUrl: 'https://happynewyear20232.netlify.app',
-            webUrl: 'https://happynewyear20232.netlify.app',
+            mobileWebUrl: 'https://newyearsong2023.netlify.app',
+            webUrl: 'https://newyearsong2023.netlify.app',
           },
         },
       ],
@@ -110,7 +100,7 @@ export default function Result() {
               <CopyToClipboard text={currentUrl}>
                 <URLShareButton>URL</URLShareButton>
               </CopyToClipboard>
-              <KakaoShareButton onClick={handleKakaoButton}>
+              <KakaoShareButton onClick={() => handleKakaoButton()}>
                 <KakaoIcon src={kakaoLogo}></KakaoIcon>
               </KakaoShareButton>
             </SnsBox>
