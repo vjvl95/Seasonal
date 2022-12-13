@@ -66,21 +66,21 @@ export default function SlotMachine() {
           </Lever>
           {isClick && leverOut && (
             <>
-              <img
+              <ResultPrint
                 src={resultPrint}
-                style={{
-                  marginBottom: '45px',
-                  marginTop: '15px',
-                  borderRadius: '10px',
-                  background: '#a3f1ca',
-
-                  boxShadow: '0px 0px 5px 1px #a3f1ca',
-                }}
+                isEndAnimation={endAnimation}
+                isLeverOut={leverOut}
                 width={'250px'}
                 alt=''
               />
-              <AfterButton isClicked={isClick} isLeverOut={leverOut}>
-                <img src={buttonEmoticon} width={'95px'} height={'108px'} alt=''></img>
+              <AfterButton isLeverOut={leverOut}>
+                <img
+                  src={buttonEmoticon}
+                  isLeverOut={leverOut}
+                  width={'95px'}
+                  height={'108px'}
+                  alt=''
+                ></img>
                 <NavLink
                   to={`/result/${slot[slotIndex[3]][4]}?name=${state.name}&category=${
                     state.category
@@ -133,6 +133,19 @@ to {
 		opacity: 1;
 
 	}
+`;
+
+const ResultPrint = styled.img`
+  margin-bottom: 45px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background: #baf7d9;
+  box-shadow: 0px 10px 3px 5px #cef8e3;
+  ${(props) =>
+    props.isLeverOut &&
+    css`
+      animation: ${scroll3} 5s 0s linear forwards;
+    `};
 `;
 const LeverImgBall = styled.img`
   position: relative;
