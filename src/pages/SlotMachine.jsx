@@ -75,7 +75,9 @@ export default function SlotMachine() {
               <AfterButton isClicked={isClick} isLeverOut={leverOut}>
                 <img src={buttonEmoticon} width={'95px'} height={'108px'} alt=''></img>
                 <NavLink
-                  to={`/result/${slot[slotIndex[3]][4]}`}
+                  to={`/result/${slot[slotIndex[3]][4]}?name=${state.name}&category=${
+                    state.category
+                  }`}
                   state={{ slot: slot[slotIndex[3]], name: state.name }}
                 >
                   {endAnimation ? (
