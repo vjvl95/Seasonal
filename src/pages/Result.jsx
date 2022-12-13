@@ -37,16 +37,16 @@ export default function Result() {
         description: '설명', // 인자값으로 받은 title
         imageUrl: '이미지 url',
         link: {
-          mobileWebUrl: 'https://newyearsong2023.netlify.app', // 인자값으로 받은 route(uri 형태)
-          webUrl: 'https://newyearsong2023.netlify.app',
+          mobileWebUrl: currentUrl, // 인자값으로 받은 route(uri 형태)
+          webUrl: currentUrl,
         },
       },
       buttons: [
         {
           title: 'title',
           link: {
-            mobileWebUrl: 'https://newyearsong2023.netlify.app',
-            webUrl: 'https://newyearsong2023.netlify.app',
+            mobileWebUrl: currentUrl,
+            webUrl: currentUrl,
           },
         },
       ],
