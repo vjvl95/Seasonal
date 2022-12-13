@@ -24,7 +24,7 @@ export default function Result() {
   useEffect(() => {
     if (status === 'ready' && window.Kakao) {
       if (!window.Kakao.isInitialized()) {
-        window.Kakao.init('3b28357e5d69d8e432dae58a61976113');
+        window.Kakao.init(`3b28357e5d69d8e432dae58a61976113`);
       }
     }
   }, [status]);
