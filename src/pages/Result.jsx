@@ -13,8 +13,8 @@ import findSlot from 'util/findSlot';
 export default function Result() {
   const location = useLocation();
   const { state } = location;
-  const slot = !state && findSlot(location.pathname);
-  const backGroundIMG = selectBackGround(state?.slot[3] || slot[3]);
+  const slot = !state && findSlot(location);
+  const backGroundIMG = selectBackGround(state?.slot[3] || slot[1][3]);
   const [isClicked, setIsClicked] = useState(false);
   const [isOpenModel, setIsOpenModel] = useState(false);
   const currentUrl = window.location.href;
@@ -56,18 +56,19 @@ export default function Result() {
   return (
     <>
       <Background back={backGroundIMG[0]}>
-        <BlackBox isFlex={false} paddingTop={'25px'}>
+        <BlackBox isFlex={false} paddingTop={'15px'}>
+          <span style={{ fontWeight: '700' }}>{state.name}</span> 님에게 <br />
           <>새해 첫 곡을 찾아줄 럭키 슬롯</>
         </BlackBox>
         <AlbumBox isClicked={isClicked}>
           <Front>
-            <Title>{state?.slot[6] || slot[6]}</Title>
-            <Singer>{state?.slot[7] || slot[7]}</Singer>
-            <Album src={state?.slot[8] || slot[8]}></Album>
-            <Lyrics color={backGroundIMG[1]}>{state?.slot[5] || slot[5]}</Lyrics>
+            <Title>{state?.slot[6] || slot[1][6]}</Title>
+            <Singer>{state?.slot[7] || slot[1][7]}</Singer>
+            <Album src={state?.slot[8] || slot[1][8]}></Album>
+            <Lyrics color={backGroundIMG[1]}>{state?.slot[5] || slot[1][5]}</Lyrics>
           </Front>
           <Back>
-            <BackIMG src={state?.slot[9] || slot[9]} width={'100%'}></BackIMG>
+            <BackIMG src={state?.slot[9] || slot[1][9]} width={'100%'}></BackIMG>
           </Back>
         </AlbumBox>
         <StartButton onClick={() => setIsClicked(!isClicked)}>
