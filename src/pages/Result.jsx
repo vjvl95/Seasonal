@@ -57,7 +57,7 @@ export default function Result() {
     <>
       <Background back={backGroundIMG[0]}>
         <BlackBox isFlex={false} paddingTop={'15px'}>
-          <span style={{ fontWeight: '700' }}>{state.name}</span> 님에게 <br />
+          <span style={{ fontWeight: '700' }}>{state?.name || slot[0]}</span> 님에게 <br />
           <>새해 첫 곡을 찾아줄 럭키 슬롯</>
         </BlackBox>
         <AlbumBox isClicked={isClicked}>
