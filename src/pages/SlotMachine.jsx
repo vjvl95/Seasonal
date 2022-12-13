@@ -85,7 +85,7 @@ export default function SlotMachine() {
                   to={`/result/${slot[slotIndex[3]][4]}?name=${state.name}&category=${
                     state.category
                   }`}
-                  state={{ slot: slot[slotIndex[3]], name: state.name }}
+                  state={{ slot: slot[slotIndex[3]], name: state.name, category: state.category }}
                 >
                   {endAnimation ? (
                     <StartButton>확인해보기!</StartButton>

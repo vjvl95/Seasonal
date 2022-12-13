@@ -1,16 +1,13 @@
 import BlackBox from 'component/common/BlackBox';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import emoticon from '../img/emoticon.png';
-import calendar from '../img/calendar.png';
 import illustrate from '../img/illustrate.png';
 import { backgroundClova } from 'img';
 export default function Home() {
   return (
     <>
       <Background>
-        <Year>2023</Year>
-        <BlackBox>♪새해 첫 곡 럭키 슬롯♪</BlackBox>
+        <BlackBox>2023년 ♪새해 첫 곡 럭키 슬롯♪</BlackBox>
         <SubTitle>
           당신에게 행운을 가져다 줄 새해 첫 곡,
           <br />
@@ -32,15 +29,9 @@ const Background = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 142px;
 `;
-const Year = styled.div`
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 28px;
-  color: #00c981;
-  text-align: center;
-  margin-top: 30%;
-`;
+
 const SubTitle = styled.div`
   width: 330px;
   height: 56px;

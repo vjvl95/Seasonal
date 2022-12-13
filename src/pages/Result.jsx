@@ -53,17 +53,34 @@ export default function Result() {
       ],
     });
   };
-
+  console.log(state);
   return (
     <>
       <Background back={backGroundIMG[0]}>
-        <BlackBox isFlex={false} paddingTop={'15px'}>
-          <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>의
-          <br />
-          <span style={{ fontWeight: '500', fontSize: '16px', fontFamily: 'DOSGothic' }}>
-            2023년 새해 첫 곡
-          </span>
-        </BlackBox>
+        {isClicked ? (
+          <>
+            <BlackBox isFlex={false} paddingTop={'15px'}>
+              <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>
+              의
+              <br />
+              <span style={{ fontWeight: '500', fontSize: '16px', fontFamily: 'DOSGothic' }}>
+                2023년 {state?.category || slot[2]} 포토카드
+              </span>
+            </BlackBox>
+          </>
+        ) : (
+          <>
+            <BlackBox isFlex={false} paddingTop={'15px'}>
+              <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>
+              의
+              <br />
+              <span style={{ fontWeight: '500', fontSize: '16px', fontFamily: 'DOSGothic' }}>
+                2023년 새해 첫 곡
+              </span>
+            </BlackBox>
+          </>
+        )}
+
         <AlbumBox isClicked={isClicked}>
           <Front>
             <Title>{state?.slot[6] || slot[1][6]}</Title>

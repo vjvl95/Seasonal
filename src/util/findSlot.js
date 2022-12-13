@@ -2,6 +2,7 @@ import { slot } from 'component/common/const';
 
 export default function findSlot(location) {
   const searchURL = decodeURI(location.search).split('=');
+  console.log(searchURL);
   const userName = searchURL[1].slice(0, searchURL[1].indexOf('&'));
   const songName = location.pathname.split('/')[2];
   const returnArr = slot
@@ -10,5 +11,5 @@ export default function findSlot(location) {
       if (v[4] === songName && v[3] === searchURL[2]) return v;
     })
     .filter((v) => v !== undefined);
-  return [userName, returnArr[0]];
+  return [userName, returnArr[0], searchURL[2]];
 }
