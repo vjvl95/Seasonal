@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import emoticon from '../img/emoticon.png';
 import calendar from '../img/calendar.png';
+import illustrate from '../img/illustrate.png';
 import { backgroundClova } from 'img';
 export default function Home() {
   return (
@@ -15,17 +16,9 @@ export default function Home() {
           <br />
           럭키 슬롯에서 뽑아보세요!
         </SubTitle>
-        <div>
-          <img src={emoticon} style={{ marginTop: '50px' }} width='100px' alt='' />
-          <img
-            src={calendar}
-            style={{ marginLeft: '25px', paddingBottom: '130px' }}
-            width='50px'
-            alt=''
-          />
-        </div>
+        <img src={illustrate} width='230px' alt='' />
         <NavLink style={{ textDecorationLine: 'none' }} to='name'>
-          <StartButton>시작하기</StartButton>
+          <StartButton>시작하기!</StartButton>
         </NavLink>
         <img src={backgroundClova} alt=''></img>
       </Background>
@@ -59,6 +52,7 @@ const SubTitle = styled.div`
   line-height: 28px;
   letter-spacing: 0em;
   margin-top: 2rem;
+  margin-bottom: 30px;
 `;
 
 const StartButton = styled.div`
@@ -73,5 +67,5 @@ const StartButton = styled.div`
   color: white;
   font-weight: 800;
   margin-bottom: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
 `;

@@ -12,7 +12,11 @@ export default function Name() {
         <BlackBox>당신의 이름은?</BlackBox>
 
         <StartContaier>
-          <InputBox value={name} onChange={(e) => setName(e.target.value)}></InputBox>
+          <InputBox
+            placeholder='입력하기'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          ></InputBox>
           <NavLink to='/selectCategory' state={{ name: name }}>
             {isVaildName ? (
               <StartButton disabled={!isVaildName}>다음</StartButton>

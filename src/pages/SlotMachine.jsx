@@ -68,7 +68,14 @@ export default function SlotMachine() {
             <>
               <img
                 src={resultPrint}
-                style={{ marginBottom: '15px', marginTop: '15px' }}
+                style={{
+                  marginBottom: '45px',
+                  marginTop: '15px',
+                  borderRadius: '10px',
+                  background: '#a3f1ca',
+
+                  boxShadow: '0px 0px 5px 1px #a3f1ca',
+                }}
                 width={'250px'}
                 alt=''
               />

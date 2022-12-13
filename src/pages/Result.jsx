@@ -10,6 +10,7 @@ import { FacebookShareButton, FacebookIcon, TwitterIcon, TwitterShareButton } fr
 import { useScript } from 'util/useScript';
 import kakaoLogo from '../img/kakaoLogo.svg';
 import findSlot from 'util/findSlot';
+import songDirection from '../img/songDirection.png';
 export default function Result() {
   const location = useLocation();
   const { state } = location;
@@ -57,14 +58,32 @@ export default function Result() {
     <>
       <Background back={backGroundIMG[0]}>
         <BlackBox isFlex={false} paddingTop={'15px'}>
-          <span style={{ fontWeight: '700' }}>{state?.name || slot[0]}</span> 님에게 <br />
-          <>새해 첫 곡을 찾아줄 럭키 슬롯</>
+          <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>의
+          <br />
+          <span style={{ fontWeight: '500', fontSize: '16px', fontFamily: 'DOSGothic' }}>
+            2023년 새해 첫 곡
+          </span>
         </BlackBox>
         <AlbumBox isClicked={isClicked}>
           <Front>
             <Title>{state?.slot[6] || slot[1][6]}</Title>
             <Singer>{state?.slot[7] || slot[1][7]}</Singer>
             <Album src={state?.slot[8] || slot[1][8]}></Album>
+            <SongLink>
+              <img
+                src={songDirection}
+                style={{
+                  textAlign: 'center',
+                  display: 'block',
+                  width: '5.42px',
+                  hegiht: '5px',
+                  marginBottom: '5px',
+                  marginTop: '5px',
+                }}
+                alt=''
+              />
+              <span style={{ fontSize: '8.93px' }}>어떤 노래일까? 들어보러가기</span>
+            </SongLink>
             <Lyrics color={backGroundIMG[1]}>{state?.slot[5] || slot[1][5]}</Lyrics>
           </Front>
           <Back>
@@ -115,7 +134,12 @@ export default function Result() {
 const KakaoShareButton = styled.a`
   cursor: pointer;
 `;
-
+const SongLink = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 const KakaoIcon = styled.img`
   width: 48px;
   height: 48px;
@@ -163,10 +187,10 @@ const Box = styled.div`
   margin-bottom: 10px;
 `;
 const BackIMG = styled.img`
-  margin-top: 70px;
-  max-height: 150px;
+  margin-top: 25%;
+  max-height: 293px;
+  width: 100%;
   @media screen and (min-width: 801px) {
-    width: 100%;
     max-height: none;
   }
 `;
@@ -182,21 +206,22 @@ const Back = styled.div`
   backface-visibility: hidden;
 `;
 const Lyrics = styled.div`
-  margin-top: 30px;
-  font-weight: 700;
+  margin-top: 20px;
+  font-weight: 500;
   font-size: 13.39px;
   padding: 0px 20px;
-  line-height: 20px;
-  color: ${(props) => props.color};
+  line-height: 22.32px;
+  color: #00c981;
 `;
 const Title = styled.div`
-  font-weight: 800;
+  font-weight: 900;
   font-size: 15.62px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   margin-top: 10px;
 `;
 const Album = styled.img`
-  width: 111px;
+  width: 115px;
+  height: 115px;
   margin: 0px auto;
   border-radius: 13px;
   @media screen and (min-width: 801px) {
@@ -208,7 +233,7 @@ const Singer = styled.div`
   font-weight: 800;
   font-size: 13.39px;
   color: gray;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `;
 const Background = styled.div`
   display: flex;
@@ -221,8 +246,8 @@ const Background = styled.div`
   background-size: cover;
 `;
 const AlbumBox = styled.div`
-  width: 233px;
-  height: 356px;
+  width: 217px;
+  height: 337px;
   background-color: white;
   margin: 30px auto;
   border-radius: 25px;
@@ -230,6 +255,8 @@ const AlbumBox = styled.div`
   padding-top: 20px;
   align-items: center;
   perspective: 1100px;
+  border: 1px solid #8fdfb7;
+
   box-shadow: 2px 4px 10px rgba(75, 81, 88, 0.25);
   position: relative;
   transition: 3s;
@@ -250,6 +277,7 @@ const StartButton = styled.button`
   width: 184px;
   height: 64px;
   font-size: 14px;
+  font-family: 'happinessSans';
   display: block;
   background: #00c981;
   border-radius: 100px;
