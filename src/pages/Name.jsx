@@ -13,7 +13,7 @@ export default function Name() {
 
         <StartContaier>
           <InputBox
-            placeholder='입력하기'
+            placeholder='최소 한글자 이상 입력해주세요.'
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></InputBox>
