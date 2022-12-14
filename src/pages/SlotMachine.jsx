@@ -27,7 +27,7 @@ export default function SlotMachine() {
       }, 7000);
       setTimeout(() => {
         setLeverOut(true);
-      }, 3000);
+      }, 2000);
     }
   }, [isClick]);
 
@@ -74,13 +74,7 @@ export default function SlotMachine() {
                 alt=''
               />
               <AfterButton isLeverOut={leverOut}>
-                <img
-                  src={buttonEmoticon}
-                  isLeverOut={leverOut}
-                  width={'95px'}
-                  height={'108px'}
-                  alt=''
-                ></img>
+                <img src={buttonEmoticon} width={'95px'} height={'108px'} alt=''></img>
                 <NavLink
                   to={`/result/${slot[slotIndex[3]][4]}?name=${state.name}&category=${
                     state.category
@@ -144,7 +138,7 @@ const ResultPrint = styled.img`
   ${(props) =>
     props.isLeverOut &&
     css`
-      animation: ${scroll3} 5s 0s linear forwards;
+      animation: ${scroll3} 3s 0s linear forwards;
     `};
 `;
 const LeverImgBall = styled.img`
@@ -155,7 +149,7 @@ const LeverImgBall = styled.img`
     props.isBall &&
     props.isClicked &&
     css`
-      animation: ${scroll} 3s 0s forwards;
+      animation: ${scroll} 2s 0s forwards;
     `};
 `;
 const LeverImgBar = styled.img``;
@@ -164,7 +158,7 @@ const AfterButton = styled.div`
   ${(props) =>
     props.isLeverOut &&
     css`
-      animation: ${scroll3} 5s 0s linear forwards;
+      animation: ${scroll3} 3s 0s linear forwards;
     `};
 `;
 const LeverText = styled.div`
@@ -220,6 +214,6 @@ const Lever = styled.div`
   ${(props) =>
     props.isClicked &&
     css`
-      animation: ${scroll2} 3s 0s linear forwards;
+      animation: ${scroll2} 2s 0s linear forwards;
     `};
 `;

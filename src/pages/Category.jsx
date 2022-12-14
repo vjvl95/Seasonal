@@ -82,6 +82,7 @@ const FlexItem = styled.div`
   @media screen and (min-width: 801px) {
     width: 80%;
     margin: 0px auto;
+    margin-top: 30px;
   }
 `;
 
@@ -96,7 +97,7 @@ const RadioButton = styled.label`
   text-align: center;
   font-weight: 700;
   line-height: 70px;
-
+  font-size: 18px;
   box-shadow: 0px -10px 3px 1px #a3f1ca inset;
 
   @media screen and (min-width: 801px) {
@@ -109,8 +110,12 @@ const HiddenRadioButton = styled.input`
   display: none;
   &:checked + ${RadioButton} {
     box-shadow: 0px 0px 0px 0px #a3f1ca inset;
-
+    transform: scale(0.95);
     background-color: #00c981;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
   }
 `;

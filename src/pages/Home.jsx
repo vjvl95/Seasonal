@@ -17,7 +17,7 @@ export default function Home() {
         <NavLink style={{ textDecorationLine: 'none' }} to='name'>
           <StartButton>시작하기!</StartButton>
         </NavLink>
-        <img src={backgroundClova} alt=''></img>
+        <img src={backgroundClova} width='80%' alt=''></img>
       </Background>
     </>
   );
@@ -30,6 +30,9 @@ const Background = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 142px;
+  @media screen and (min-width: 801px) {
+    padding-top: 34.1%;
+  }
 `;
 
 const SubTitle = styled.div`

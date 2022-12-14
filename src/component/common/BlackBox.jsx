@@ -20,7 +20,8 @@ const Title = styled.div`
   background-color: black;
   border-radius: 15px;
   color: white;
-  border: 8px double white;
+  border: 2px solid #8a9299;
+  box-shadow: 0 0 0 6px white inset;
   line-height: 20px;
   padding-top: ${({ paddingTop }) => paddingTop};
   margin-top: ${({ marginTop }) => marginTop};

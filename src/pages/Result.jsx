@@ -53,7 +53,6 @@ export default function Result() {
       ],
     });
   };
-  console.log(state);
   return (
     <>
       <Background back={backGroundIMG[0]}>
@@ -92,7 +91,7 @@ export default function Result() {
                 style={{
                   textAlign: 'center',
                   display: 'block',
-                  width: '5.42px',
+                  width: '10.42px',
                   hegiht: '5px',
                   marginBottom: '5px',
                   marginTop: '5px',
@@ -110,21 +109,29 @@ export default function Result() {
         <StartButton onClick={() => setIsClicked(!isClicked)}>
           {isClicked ? '카드 뒤집어서 노래 보기' : '카드 뒤집어서 짤 보기'}
         </StartButton>
-        <Box>
-          <InnerBox>
-            <img onClick={() => setIsOpenModel(!isOpenModel)} src={SNSButton} width='48px' alt='' />
-            <span style={{ marginTop: '5px' }}>SNS 공유</span>
-          </InnerBox>
-          <NavLink
-            style={{ display: 'block', color: '#00c981', textDecorationLine: 'none' }}
-            to={'/'}
-          >
+        {isClicked && (
+          <Box>
             <InnerBox>
-              <img src={HomeButton} width='48px' alt='' />
-              <span style={{ marginTop: '5px' }}>다시 하기</span>
+              <img
+                onClick={() => setIsOpenModel(!isOpenModel)}
+                src={SNSButton}
+                width='48px'
+                alt=''
+              />
+              <span style={{ marginTop: '5px' }}>SNS 공유</span>
             </InnerBox>
-          </NavLink>
-        </Box>
+            <NavLink
+              style={{ display: 'block', color: '#00c981', textDecorationLine: 'none' }}
+              to={'/'}
+            >
+              <InnerBox>
+                <img src={HomeButton} width='48px' alt='' />
+                <span style={{ marginTop: '5px' }}>다시 하기</span>
+              </InnerBox>
+            </NavLink>
+          </Box>
+        )}
+
         {isOpenModel && (
           <Model>
             <SnsBox>
@@ -256,7 +263,7 @@ const Background = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20%;
+  padding-top: 25%;
   min-height: 812px;
   background-image: ${(props) => `url(${props.back})`};
   background-repeat: no-repeat;
