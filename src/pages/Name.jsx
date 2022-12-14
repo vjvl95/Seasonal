@@ -79,4 +79,7 @@ const InputBox = styled.input`
   border: 1.5px solid #bcecd3;
   box-shadow: 0px 4px 20px 5px rgba(0, 165, 85, 0.1);
   border-radius: 100px;
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
 `;
