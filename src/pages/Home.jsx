@@ -24,6 +24,8 @@ export default function Home() {
 }
 
 const Background = styled.div`
+  font-family: 'happinessSans';
+
   min-height: 812px;
   height: 100vh;
   display: flex;
