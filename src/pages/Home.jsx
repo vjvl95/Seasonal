@@ -49,6 +49,7 @@ const SubTitle = styled.div`
   letter-spacing: 0em;
   margin-top: 2rem;
   margin-bottom: 30px;
+  font-family: 'happinessSans';
 `;
 
 const StartButton = styled.div`
@@ -64,4 +65,5 @@ const StartButton = styled.div`
   font-weight: 800;
   margin-bottom: 40px;
   margin-top: 40px;
+  font-family: 'happinessSans';
 `;
