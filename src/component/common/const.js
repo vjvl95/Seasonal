@@ -290,6 +290,7 @@ export const slot = [
     '트와이스',
     TwiceAlbem,
     TwiceMeme,
+    'https://youtu.be/XA2YEHn-A8Q',
   ],
   [
     lightning,
@@ -302,6 +303,7 @@ export const slot = [
     '마이티마우스',
     MightyMouthAlbem,
     MightyMouthMeme,
+    'https://youtu.be/X9qAHFXJPDs',
   ],
   [
     health2,
@@ -314,6 +316,7 @@ export const slot = [
     '건이',
     GunnyAlbem,
     GunnyMeme,
+    'https://youtu.be/K07faTcthWc',
   ],
   [
     baby,
@@ -326,6 +329,7 @@ export const slot = [
     '블랙핑크',
     BlackPinkAlbem,
     BlackPinkMeme,
+    'https://youtu.be/wV6qz89SU2c',
   ],
   [
     power,
@@ -338,6 +342,7 @@ export const slot = [
     '르세라핌',
     LESSERAFIMAlbem,
     LESSERAFIMMeme,
+    'https://youtu.be/pyf8cbqyfPs',
   ],
   [
     thumb,
@@ -350,6 +355,7 @@ export const slot = [
     '썸데프',
     SOMDEFAlbem,
     SOMDEFMeme,
+    `https://youtu.be/E1JeFr3RTf0`,
   ],
   [
     power,
@@ -362,6 +368,7 @@ export const slot = [
     '소란',
     SoranAlbem,
     SOMDEFMeme,
+    'https://youtu.be/trDQyIOlpjE',
   ],
   [
     nosmoking,
@@ -374,6 +381,7 @@ export const slot = [
     '건아들',
     NoSmokingAlbem,
     NoSmokingMeme,
+    'https://youtu.be/KKtwSLubpxs',
   ],
 
   [
@@ -387,6 +395,7 @@ export const slot = [
     'EXO',
     EXO,
     EXOMeme,
+    'https://youtu.be/tbe3pe2BtwA',
   ],
   [
     moneyface,
@@ -399,6 +408,7 @@ export const slot = [
     'Pink Floyd',
     PinkfloyedAlbem,
     PinkfloyedMeme,
+    'https://youtu.be/-0kcet4aPpQ',
   ],
   [
     slotmachine,
@@ -411,6 +421,7 @@ export const slot = [
     '블락비',
     BlockBAlbem,
     BlockBMeme,
+    'https://youtu.be/83Yscg5vtVQ',
   ],
   [
     newyear,
@@ -423,6 +434,7 @@ export const slot = [
     '아이즈원',
     IZONEAlbem,
     IZONEMeme,
+    'https://youtu.be/eDEFolvLn0A',
   ],
   [
     oksing,
@@ -435,6 +447,7 @@ export const slot = [
     '아이유',
     IUAlbem,
     IUMeme,
+    'https://youtu.be/86BST8NIpNM',
   ],
   [
     lucky,
@@ -447,21 +460,11 @@ export const slot = [
     'NCT127',
     NCT127Albem,
     NCT127Meme,
+    'https://youtu.be/5g7dEUNG36U',
   ],
 
   //10
-  [
-    paper,
-    pen,
-    moneyCategory,
-    '재물운',
-    'Sign',
-    '끝엔 해피엔딩일 거야 나도 해냈잖아 취뽀',
-    'SIGN',
-    'SINCE',
-    Since,
-    SinceMeme,
-  ],
+
   [
     paper,
     pen,
@@ -473,6 +476,7 @@ export const slot = [
     'SINCE',
     Since,
     SinceMeme,
+    'https://youtu.be/_eYhW_Z4nkA',
   ],
 
   [
@@ -486,6 +490,7 @@ export const slot = [
     '	레드벨벳',
     RedVelvetAlbem,
     RedVelvetMeme,
+    'https://youtu.be/JFgv8bKfxEs',
   ],
   [
     love,
@@ -498,6 +503,7 @@ export const slot = [
     'the delegation',
     DelegationAlbem,
     DelegationMeme,
+    'https://youtu.be/zzVOHrKtL6Y',
   ],
   [
     ring,
@@ -510,6 +516,7 @@ export const slot = [
     '씨야',
     SeeYaAlbem,
     SeeYaMeme,
+    'https://youtu.be/ykH4NB4dWrU',
   ],
   [
     love,
@@ -522,6 +529,7 @@ export const slot = [
     '2AM',
     AMAlbem,
     AMMeme,
+    'https://youtu.be/E5B1ERDWB-w',
   ],
   [
     love,
@@ -534,6 +542,7 @@ export const slot = [
     '휘성',
     WheeSungAlbem,
     WheeSungMeme,
+    'https://youtu.be/nL8dfpEsIDY',
   ],
   [
     gift,
@@ -546,6 +555,7 @@ export const slot = [
     '멜로망스',
     MeloManceAlbem,
     MeloManceMeme,
+    'https://youtu.be/qYYJqWsBb1U',
   ],
   //20
   [
@@ -559,6 +569,7 @@ export const slot = [
     '윤딴딴',
     YUNAlbem,
     YUNMeme,
+    'https://youtu.be/UTku3JIxE7E',
   ], //21
   [
     maxscore,
@@ -571,6 +582,7 @@ export const slot = [
     '선우정아',
     EternityAlbem,
     EternityMeme,
+    'https://youtu.be/jfTFyw6V5Sk',
   ],
   [
     runningwoman,
@@ -583,6 +595,7 @@ export const slot = [
     '2NE1',
     NE1Albem,
     NE1Meme,
+    'https://youtu.be/j7_lSP8Vc3o',
   ],
   [
     graduate,
@@ -595,6 +608,7 @@ export const slot = [
     '올티',
     OlltiiAlbem,
     OlltiiMeme,
+    'https://youtu.be/sMgJvLYTWdM',
   ],
   [
     runningwoman,
@@ -607,6 +621,7 @@ export const slot = [
     '가호',
     Gaho,
     GahoMeme,
+    'https://youtu.be/6LDg0YGYVw4',
   ],
   [
     runningwoman,
@@ -619,6 +634,7 @@ export const slot = [
     '가호',
     Gaho,
     GahoMeme,
+    'https://youtu.be/6LDg0YGYVw4',
   ],
   [
     sakura,
@@ -631,6 +647,7 @@ export const slot = [
     '세정',
     SejeongAlbem,
     FlowerRoadMeme,
+    'https://youtu.be/zumBqDr0FCk',
   ],
   [
     sakura,
@@ -643,6 +660,7 @@ export const slot = [
     '세정',
     SejeongAlbem,
     FlowerRoadMeme,
+    'https://youtu.be/zumBqDr0FCk',
   ],
   [
     clova,
@@ -655,6 +673,7 @@ export const slot = [
     '제이레빗',
     JRabbitAlbem,
     JRabbitMeme,
+    'https://youtu.be/M9l-4V9krYo',
   ],
   [
     clova,
@@ -667,6 +686,7 @@ export const slot = [
     '제이레빗',
     JRabbitAlbem,
     JRabbitMeme,
+    'https://youtu.be/M9l-4V9krYo',
   ], //30
   [
     happy2,
@@ -679,6 +699,7 @@ export const slot = [
     '김동률',
     StartAlbem,
     StartMeme,
+    'https://youtu.be/xgvckGs6xhU',
   ], //31
   [
     happy2,
@@ -691,6 +712,7 @@ export const slot = [
     '김동률',
     StartAlbem,
     StartMeme,
+    'https://youtu.be/xgvckGs6xhU',
   ],
   [
     happy1,
@@ -703,6 +725,7 @@ export const slot = [
     '데이식스',
     DaySixAlbem,
     DaySixMeme,
+    'https://youtu.be/g4V36AfI4Ng',
   ],
   [
     happy1,
@@ -715,6 +738,7 @@ export const slot = [
     '데이식스',
     DaySixAlbem,
     DaySixMeme,
+    'https://youtu.be/g4V36AfI4Ng',
   ],
   [
     celebration,
@@ -727,6 +751,7 @@ export const slot = [
     '다비치',
     FanfareAlbem,
     FanfareMeme,
+    'https://youtu.be/BtPHw6YLMN0',
   ],
   [
     celebration,
@@ -739,6 +764,7 @@ export const slot = [
     '다비치',
     FanfareAlbem,
     FanfareMeme,
+    'https://youtu.be/BtPHw6YLMN0',
   ],
   [
     purpledevil,
@@ -751,6 +777,7 @@ export const slot = [
     '이한철',
     SuperStarAlbem,
     SuperStarMeme,
+    'https://youtu.be/SruG2InmPeI',
   ],
   [
     purpledevil,
@@ -763,6 +790,7 @@ export const slot = [
     '이한철',
     SuperStarAlbem,
     SuperStarMeme,
+    'https://youtu.be/SruG2InmPeI',
   ],
   [
     ear,
@@ -775,6 +803,7 @@ export const slot = [
     '조빈',
     Zobin,
     ZobinMeme,
+    'https://youtu.be/o9hpUJLa1gs',
   ],
   [
     ear,
@@ -787,6 +816,7 @@ export const slot = [
     '조빈',
     Zobin,
     ZobinMeme,
+    'https://youtu.be/o9hpUJLa1gs',
   ],
   [
     gini,
@@ -799,6 +829,7 @@ export const slot = [
     '우주소녀',
     WJSNAlbem,
     WJSNMeme,
+    'https://youtu.be/2Q9G6R2hKIQ',
   ],
   [
     gini,
@@ -811,6 +842,7 @@ export const slot = [
     '아이오아이',
     IOIAlbem,
     IOIMeme,
+    'https://youtu.be/8Zu_yO4pNEY',
   ],
   [
     kite,
@@ -823,6 +855,7 @@ export const slot = [
     '장기하와 얼굴들',
     KihaAlbem,
     KihaMeme,
+    'https://youtu.be/yDCfuQLPhyY',
   ],
 
   [
@@ -836,6 +869,7 @@ export const slot = [
     '태연',
     FlyAlbem,
     FlyMeme,
+    'https://youtu.be/YIrON_YUE70',
   ],
   [
     gini,
@@ -848,6 +882,7 @@ export const slot = [
     'Aespa',
     AespaAlbem,
     AespaMeme,
+    'https://youtu.be/H69tJmsgd9I',
   ],
   [
     clap,
@@ -860,6 +895,7 @@ export const slot = [
     '조이',
     JoyAlbem,
     JoyMeme,
+    'https://youtu.be/lNvBbh5jDcA',
   ],
   [
     sakura,
@@ -872,6 +908,7 @@ export const slot = [
     'BTS',
     BTSAlbem,
     BTSMeme,
+    'https://youtu.be/xEeFrLSkMm8',
   ],
   [
     soon,
@@ -884,6 +921,7 @@ export const slot = [
     '위키미키',
     WikiMiki,
     WikiMikiMeme,
+    'https://youtu.be/AHikmx0eVXM',
   ],
 ];
 

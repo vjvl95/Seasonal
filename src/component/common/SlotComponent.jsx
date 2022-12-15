@@ -1,6 +1,7 @@
 import styled, { keyframes, css } from 'styled-components';
 import { imgFileLeft, imgFileRight, category } from './const';
-export default function SlotComponent({ slotIndex, isClick, selectCategory }) {
+import plusIMG from '../../img/plus.png';
+export default function SlotComponent({ slotIndex, isClick, endAnimation }) {
   return (
     <>
       <FlexBox>
@@ -9,11 +10,19 @@ export default function SlotComponent({ slotIndex, isClick, selectCategory }) {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </FirstLetter>
+        {endAnimation && (
+          <img style={{ position: 'relative', right: '20px' }} width='20px' src={plusIMG} alt='' />
+        )}
+
         <SecondLetter number={slotIndex[1]} isClicked={isClick}>
           {imgFileRight.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </SecondLetter>
+        {endAnimation && (
+          <img style={{ position: 'relative', right: '20px' }} width='20px' src={plusIMG} alt='' />
+        )}
+
         <ThridLetter number={slotIndex[2]} isClicked={isClick}>
           {category.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;

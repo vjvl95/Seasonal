@@ -37,6 +37,7 @@ const Background = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 37%;
+  font-family: 'happinessSans';
 
   @media screen and (min-width: 801px) {
     padding-top: 34.1%;
@@ -79,6 +80,9 @@ const InputBox = styled.input`
   border: 1.5px solid #bcecd3;
   box-shadow: 0px 4px 20px 5px rgba(0, 165, 85, 0.1);
   border-radius: 100px;
+  &::placeholder {
+    font-family: 'happinessSans';
+  }
   &:focus::-webkit-input-placeholder {
     color: transparent;
   }

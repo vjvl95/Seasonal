@@ -89,7 +89,6 @@ const FlexItem = styled.div`
 const RadioButton = styled.label`
   display: inline-block;
   min-width: 150px;
-  width: 100%;
   height: 82px;
   //margin: 10px;
   border: 1px solid #bcecd3;
@@ -109,8 +108,9 @@ const RadioButton = styled.label`
 const HiddenRadioButton = styled.input`
   display: none;
   &:checked + ${RadioButton} {
+    margin-top: 17px;
     box-shadow: 0px 0px 0px 0px #a3f1ca inset;
-    transform: scale(0.95);
+    height: 65px;
     background-color: #00c981;
     color: white;
     display: flex;

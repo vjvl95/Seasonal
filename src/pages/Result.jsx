@@ -11,6 +11,7 @@ import { useScript } from 'util/useScript';
 import kakaoLogo from '../img/kakaoLogo.svg';
 import findSlot from 'util/findSlot';
 import songDirection from '../img/songDirection.png';
+const { REACT_APP_KAKAO_KEY } = process.env;
 export default function Result() {
   const location = useLocation();
   const { state } = location;
@@ -25,7 +26,7 @@ export default function Result() {
   useEffect(() => {
     if (status === 'ready' && window.Kakao) {
       if (!window.Kakao.isInitialized()) {
-        window.Kakao.init(`3b28357e5d69d8e432dae58a61976113`);
+        window.Kakao.init(REACT_APP_KAKAO_KEY);
       }
     }
   }, [status]);
@@ -34,17 +35,24 @@ export default function Result() {
     window.Kakao.Link.sendDefault({
       objectType: 'feed', // 카카오 링크 공유 여러 type들 중 feed라는 타입 -> 자세한 건 카카오에서 확인
       content: {
-        title: '새해첫곡', // 인자값으로 받은 title
-        description: '설명', // 인자값으로 받은 title
+        title: '2023년 당신의 새해첫곡은?', // 인자값으로 받은 title
+        description: '#새해첫곡', // 인자값으로 받은 title
         imageUrl: '이미지 url',
         link: {
-          mobileWebUrl: currentUrl, // 인자값으로 받은 route(uri 형태)
-          webUrl: currentUrl,
+          mobileWebUrl: 'https://newyearsong2023.netlify.app', // 인자값으로 받은 route(uri 형태)
+          webUrl: 'https://newyearsong2023.netlify.app/',
         },
       },
       buttons: [
         {
-          title: 'title',
+          title: '첫페이지로',
+          link: {
+            mobileWebUrl: 'https://newyearsong2023.netlify.app', // 인자값으로 받은 route(uri 형태)
+            webUrl: 'https://newyearsong2023.netlify.app/',
+          },
+        },
+        {
+          title: '결과페이지로',
           link: {
             mobileWebUrl: currentUrl,
             webUrl: currentUrl,
@@ -84,7 +92,9 @@ export default function Result() {
           <Front>
             <Title>{state?.slot[6] || slot[1][6]}</Title>
             <Singer>{state?.slot[7] || slot[1][7]}</Singer>
-            <Album src={state?.slot[8] || slot[1][8]}></Album>
+            <a href={state?.slot[10] || slot[1][10]} rel='noreferrer' target='_blank'>
+              <Album src={state?.slot[8] || slot[1][8]}></Album>
+            </a>
             <SongLink>
               <img
                 src={songDirection}
@@ -268,6 +278,7 @@ const Background = styled.div`
   background-image: ${(props) => `url(${props.back})`};
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: '';
 `;
 const AlbumBox = styled.div`
   width: 217px;

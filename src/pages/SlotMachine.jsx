@@ -11,6 +11,7 @@ import findIndex from 'util/findIndex';
 import { slot } from 'component/common/const';
 import { buttonEmoticon } from 'img';
 import { useEffect } from 'react';
+import selectBackGround from '../util/selectBackground';
 
 export default function SlotMachine() {
   const [isClick, setIsClick] = useState(false);
@@ -19,7 +20,7 @@ export default function SlotMachine() {
   const location = useLocation();
   const { state } = location;
   const slotIndex = useMemo(() => findIndex(state.category), [state]);
-
+  const categoryColor = useMemo(() => selectBackGround(state.category), [state]);
   useEffect(() => {
     if (isClick) {
       setTimeout(() => {
@@ -37,13 +38,14 @@ export default function SlotMachine() {
         <BlackBox fontSize={'15px'} paddingTop={'15px'} isFlex={false}>
           {isClick ? (
             <>
-              <span style={{ fontWeight: '700' }}>{state.name}</span>님에게 <br />
-              2023년 <span style={{ fontWeight: '700' }}>{state.category}</span>을 가져다 줄
-              노래는..?!
+              <span style={{ fontWeight: '700', color: '#00F19A' }}>{state.name}</span>님에게 <br />
+              2023년{' '}
+              <span style={{ fontWeight: '700', color: categoryColor[1] }}>{state.category}</span>을
+              가져다 줄 노래는..?!
             </>
           ) : (
             <>
-              <span style={{ fontWeight: '700' }}>{state.name}</span> 님의 <br />
+              <span style={{ fontWeight: '700', color: '#00F19A' }}>{state.name}</span> 님의 <br />
               새해 첫 곡을 찾아줄 럭키 슬롯!
             </>
           )}
@@ -54,6 +56,7 @@ export default function SlotMachine() {
             setIsClick={setIsClick}
             selectCategory={state.category}
             slotIndex={slotIndex}
+            endAnimation={endAnimation}
           />
         </SlotBox>
         <ButtonBox>
@@ -82,7 +85,7 @@ export default function SlotMachine() {
                   state={{ slot: slot[slotIndex[3]], name: state.name, category: state.category }}
                 >
                   {endAnimation ? (
-                    <StartButton>확인해보기!</StartButton>
+                    <StartButton>결과 확인해보기!</StartButton>
                   ) : (
                     <StartButton disabled endAnimation={endAnimation}>
                       결과를 기다려주세요
@@ -133,8 +136,6 @@ const ResultPrint = styled.img`
   margin-bottom: 45px;
   margin-top: 15px;
   border-radius: 10px;
-  background: #baf7d9;
-  box-shadow: 0px 10px 3px 5px #cef8e3;
   ${(props) =>
     props.isLeverOut &&
     css`
