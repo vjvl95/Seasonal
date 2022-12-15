@@ -97,7 +97,7 @@ export default function SlotMachine() {
                   state={{ slot: slot[slotIndex[3]], name: state?.name, category: state?.category }}
                 >
                   {endAnimation ? (
-                    <StartButton>결과 확인해보기!</StartButton>
+                    <StartButton>결과 확인하기</StartButton>
                   ) : (
                     <StartButton disabled endAnimation={endAnimation}>
                       결과를 기다려주세요
