@@ -5,29 +5,26 @@ export default function SlotComponent({ slotIndex, isClick, endAnimation }) {
   return (
     <>
       <FlexBox>
+        <ThridLetter isClicked={isClick}>
+          <img src={category[slotIndex[2]]} width='50px' height='50px' alt='' />;
+        </ThridLetter>
+        {endAnimation && (
+          <img style={{ position: 'relative', right: '20px' }} width='20px' src={plusIMG} alt='' />
+        )}
         <FirstLetter number={slotIndex[0]} isClicked={isClick}>
           {imgFileLeft.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </FirstLetter>
+
         {endAnimation && (
           <img style={{ position: 'relative', right: '20px' }} width='20px' src={plusIMG} alt='' />
         )}
-
         <SecondLetter number={slotIndex[1]} isClicked={isClick}>
           {imgFileRight.map((img, i) => {
             return <img key={i} src={img} width='50px' height='50px' alt='' />;
           })}
         </SecondLetter>
-        {endAnimation && (
-          <img style={{ position: 'relative', right: '20px' }} width='20px' src={plusIMG} alt='' />
-        )}
-
-        <ThridLetter number={slotIndex[2]} isClicked={isClick}>
-          {category.map((img, i) => {
-            return <img key={i} src={img} width='50px' height='50px' alt='' />;
-          })}
-        </ThridLetter>
       </FlexBox>
     </>
   );
@@ -75,10 +72,8 @@ const SecondLetter = styled.div`
   display: flex;
   flex-direction: column;
   height: 50px;
-  color: blue;
   box-sizing: border-box;
   overflow: hidden;
-  margin-right: 2.5rem;
   --end: -46;
   --a: ${(props) => props.number};
   ${(props) =>
@@ -95,19 +90,7 @@ const ThridLetter = styled.div`
   flex-direction: column;
   height: 50px;
   overflow: hidden;
-
-  span {
-    font-size: 30px;
-  }
-  --end: -7;
-  --a: ${(props) => props.number};
-  ${(props) =>
-    props.isClicked &&
-    css`
-      img {
-        animation: ${scroll} 2s 0s linear forwards, ${scroll2} 3s 2s linear forwards;
-      }
-    `};
+  margin-right: 2.5rem;
 `;
 
 const FlexBox = styled.div`

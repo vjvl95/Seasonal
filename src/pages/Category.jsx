@@ -1,16 +1,24 @@
 import BlackBox from 'component/common/BlackBox';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
 import { data } from '../component/common/const';
+import { useEffect } from 'react';
 
 export default function Category() {
   const location = useLocation();
+  const nav = useNavigate();
   const { state } = location;
   const [category, setCategory] = useState('');
-  const [name] = useState(state.name);
+  const [name] = useState(state?.name);
   const [isClicked, setIsClicked] = useState(false);
 
+  useEffect(() => {
+    console.log(state);
+    if (state === null) {
+      nav('/404');
+    }
+  });
   return (
     <>
       <Background>

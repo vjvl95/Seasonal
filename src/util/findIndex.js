@@ -2,6 +2,7 @@ import { imgFileLeft, imgFileRight, category, slot } from 'component/common/cons
 
 export default function findIndex(selectCategory) {
   // eslint-disable-next-line array-callback-return
+
   const select = slot.filter((v) => {
     if (v[3] === selectCategory) return v;
   });
@@ -29,7 +30,7 @@ export default function findIndex(selectCategory) {
         return -imgFileRight.indexOf(v);
       }
       if (i === 2) {
-        return -category.indexOf(v);
+        return category.indexOf(v);
       }
     })
     .filter((v) => v !== undefined);

@@ -6,7 +6,7 @@ import lever_bar from '../img/lever_bar.png';
 import resultPrint from '../img/resultPrint.png';
 import SlotMachineBox from '../component/common/SlotComponent';
 import styled, { keyframes, css } from 'styled-components';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import findIndex from 'util/findIndex';
 import { slot } from 'component/common/const';
 import { buttonEmoticon } from 'img';
@@ -19,8 +19,15 @@ export default function SlotMachine() {
   const [leverOut, setLeverOut] = useState(false);
   const location = useLocation();
   const { state } = location;
-  const slotIndex = useMemo(() => findIndex(state.category), [state]);
-  const categoryColor = useMemo(() => selectBackGround(state.category), [state]);
+  const nav = useNavigate();
+
+  const slotIndex =
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    state === null ? nav('/404') : useMemo(() => findIndex(state?.category), [state]);
+  const categoryColor = null
+    ? nav('/404')
+    : // eslint-disable-next-line react-hooks/rules-of-hooks
+      useMemo(() => selectBackGround(state?.category), [state]);
   useEffect(() => {
     if (isClick) {
       setTimeout(() => {
@@ -32,20 +39,25 @@ export default function SlotMachine() {
     }
   }, [isClick]);
 
+  useEffect(() => {
+    console.log(state);
+  });
+
   return (
     <>
       <Background>
         <BlackBox fontSize={'15px'} paddingTop={'15px'} isFlex={false}>
           {isClick ? (
             <>
-              <span style={{ fontWeight: '700', color: '#00F19A' }}>{state.name}</span>님에게 <br />
+              <span style={{ fontWeight: '700', color: '#00F19A' }}>{state?.name}</span>님에게{' '}
+              <br />
               2023년{' '}
-              <span style={{ fontWeight: '700', color: categoryColor[1] }}>{state.category}</span>을
-              가져다 줄 노래는..?!
+              <span style={{ fontWeight: '700', color: categoryColor[1] }}>{state?.category}</span>
+              을 가져다 줄 노래는..?!
             </>
           ) : (
             <>
-              <span style={{ fontWeight: '700', color: '#00F19A' }}>{state.name}</span> 님의 <br />
+              <span style={{ fontWeight: '700', color: '#00F19A' }}>{state?.name}</span> 님의 <br />
               새해 첫 곡을 찾아줄 럭키 슬롯!
             </>
           )}
@@ -54,7 +66,7 @@ export default function SlotMachine() {
           <SlotMachineBox
             isClick={isClick}
             setIsClick={setIsClick}
-            selectCategory={state.category}
+            selectCategory={state?.category}
             slotIndex={slotIndex}
             endAnimation={endAnimation}
           />
@@ -79,10 +91,10 @@ export default function SlotMachine() {
               <AfterButton isLeverOut={leverOut}>
                 <img src={buttonEmoticon} width={'95px'} height={'108px'} alt=''></img>
                 <NavLink
-                  to={`/result/${slot[slotIndex[3]][4]}?name=${state.name}&category=${
-                    state.category
+                  to={`/result/${slot[slotIndex[3]][4]}?name=${state?.name}&category=${
+                    state?.category
                   }`}
-                  state={{ slot: slot[slotIndex[3]], name: state.name, category: state.category }}
+                  state={{ slot: slot[slotIndex[3]], name: state?.name, category: state?.category }}
                 >
                   {endAnimation ? (
                     <StartButton>결과 확인해보기!</StartButton>
