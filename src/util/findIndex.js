@@ -2,7 +2,6 @@ import { imgFileLeft, imgFileRight, category, slot } from 'component/common/cons
 
 export default function findIndex(selectCategory) {
   // eslint-disable-next-line array-callback-return
-
   const select = slot.filter((v) => {
     if (v[3] === selectCategory) return v;
   });

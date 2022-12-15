@@ -55,18 +55,3 @@ const SubTitle = styled.div`
   margin-top: 2rem;
   margin-bottom: 30px;
 `;
-
-const StartButton = styled.div`
-  width: 180px;
-  height: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #00c981;
-  backdrop-filter: blur(2.5px);
-  border-radius: 100px;
-  color: white;
-  font-weight: 800;
-  margin-bottom: 40px;
-  margin-top: 40px;
-`;
