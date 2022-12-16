@@ -31,7 +31,6 @@ const InnerBox = styled.div`
   margin-top: 30px;
 `;
 const Background = styled.div`
-  min-height: 812px;
   height: 100vh;
   display: flex;
   flex-direction: column;

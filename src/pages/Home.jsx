@@ -25,13 +25,11 @@ export default function Home() {
 
 const Background = styled.div`
   font-family: 'happinessSans';
-
-  min-height: 812px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 142px;
+  padding-top: 37%;
   @media screen and (min-width: 801px) {
     padding-top: 34.1%;
   }
@@ -47,8 +45,8 @@ const SubTitle = styled.div`
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em;
-  margin-top: 2rem;
-  margin-bottom: 30px;
+  margin-top: 6rem;
+  margin-bottom: 15px;
   font-family: 'happinessSans';
 `;
 

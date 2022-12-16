@@ -8,6 +8,7 @@ export default function BlackBox({ children, fontSize, marginTop, paddingTop, is
   );
 }
 const Title = styled.div`
+  position: absolute;
   display: ${({ isFlex }) => (isFlex ? 'flex' : '')};
   justify-content: center;
   align-items: center;
@@ -26,6 +27,6 @@ const Title = styled.div`
   padding-top: ${({ paddingTop }) => paddingTop};
   margin-top: ${({ marginTop }) => marginTop};
   @media screen and (min-width: 801px) {
-    width: 80%;
+    width: 30%;
   }
 `;

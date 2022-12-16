@@ -184,12 +184,11 @@ const LeverText = styled.div`
 `;
 
 const Background = styled.div`
-  min-height: 810px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 39.4%;
-
+  height: 100vh;
   @media screen and (min-width: 801px) {
     padding-top: 34.1%;
   }
@@ -214,6 +213,7 @@ const SlotBox = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-top: 5rem;
 `;
 const ButtonBox = styled.div`
   text-align: center;

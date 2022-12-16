@@ -142,14 +142,14 @@ export default function Result() {
           </Box>
         )}
 
-        {isOpenModel && (
+        {isOpenModel && isClicked && (
           <Model>
             <SnsBox>
               <FacebookShareButton url={currentUrl}>
-                <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
+                <FacebookIcon size={40} round={true} borderRadius={24}></FacebookIcon>
               </FacebookShareButton>
               <TwitterShareButton url={currentUrl}>
-                <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
+                <TwitterIcon size={40} round={true} borderRadius={24}></TwitterIcon>
               </TwitterShareButton>
               <CopyToClipboard text={currentUrl}>
                 <URLShareButton>URL</URLShareButton>
@@ -175,19 +175,18 @@ const SongLink = styled.div`
   align-items: center;
 `;
 const KakaoIcon = styled.img`
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 24px;
 `;
 
 const URLShareButton = styled.button`
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   color: white;
   border-radius: 24px;
-  border: 0px;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   background-color: #7362ff;
 `;
@@ -274,11 +273,14 @@ const Background = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 25%;
-  min-height: 812px;
   background-image: ${(props) => `url(${props.back})`};
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: '';
+  height: 100vh;
+
+  @media screen and (min-width: 801px) {
+    padding-top: 15%;
+  }
 `;
 const AlbumBox = styled.div`
   width: 217px;
@@ -291,15 +293,15 @@ const AlbumBox = styled.div`
   align-items: center;
   perspective: 1100px;
   border: 1px solid #8fdfb7;
-
+  margin-top: 6rem;
   box-shadow: 2px 4px 10px rgba(75, 81, 88, 0.25);
   position: relative;
   transition: 3s;
   transform-style: preserve-3d;
 
   @media screen and (min-width: 801px) {
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     padding-top: 0px;
   }
   ${(props) =>

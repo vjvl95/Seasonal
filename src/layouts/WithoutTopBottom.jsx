@@ -15,6 +15,7 @@ const Root = styled.div`
   @media screen and (min-width: 1100px) {
     width: 40%;
     margin: 0 auto;
+    height: 100%;
   }
 `;
 const Container = styled.div`

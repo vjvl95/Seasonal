@@ -51,11 +51,11 @@ export default function Category() {
 }
 
 const Background = styled.div`
-  min-height: 812px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 37%;
+  height: 100vh;
   @media screen and (min-width: 801px) {
     padding-top: 34.1%;
   }
@@ -85,7 +85,7 @@ const FlexItem = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 6rem;
 
   @media screen and (min-width: 801px) {
     width: 80%;

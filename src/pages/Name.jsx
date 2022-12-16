@@ -31,7 +31,6 @@ export default function Name() {
 }
 
 const Background = styled.div`
-  min-height: 812px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,7 +71,7 @@ const StartContaier = styled.div`
 const InputBox = styled.input`
   width: 340px;
   height: 144px;
-  margin-top: 30px;
+  margin-top: 100px;
   font-weight: 700;
   font-size: 20px;
   text-align: center;
