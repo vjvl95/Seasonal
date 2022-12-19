@@ -225,9 +225,6 @@ const Box = styled.div`
 const BackIMG = styled.img`
   max-height: 293px;
   width: 100%;
-  @media screen and (min-width: 801px) {
-    max-height: none;
-  }
 `;
 const Front = styled.div`
   position: absolute;

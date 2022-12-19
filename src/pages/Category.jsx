@@ -89,7 +89,7 @@ const FlexItem = styled.div`
   @media screen and (min-width: 801px) {
     width: 80%;
     margin: 0px auto;
-    margin-top: 30px;
+    margin-top: 100px;
   }
 `;
 
