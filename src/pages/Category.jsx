@@ -14,7 +14,6 @@ export default function Category() {
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-    console.log(state);
     if (state === null) {
       nav('/404');
     }

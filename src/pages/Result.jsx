@@ -113,7 +113,7 @@ export default function Result() {
             <Lyrics color={backGroundIMG[1]}>{state?.slot[5] || slot[1][5]}</Lyrics>
           </Front>
           <Back>
-            <BackIMG src={state?.slot[9] || slot[1][9]} width={'100%'}></BackIMG>
+            <BackIMG src={state?.slot[9] || slot[1][9]}></BackIMG>
           </Back>
         </AlbumBox>
         <StartButton onClick={() => setIsClicked(!isClicked)}>
@@ -191,12 +191,18 @@ const URLShareButton = styled.button`
   background-color: #7362ff;
 `;
 const SnsBox = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 48px);
-  grid-column-gap: 16px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
+  gap: 20px;
+  flex-direction: column;
+  position: relative;
+  bottom: 150px;
+  left: -130px;
+  padding-top: 10px;
+  background-color: #d1fceb;
+  border-radius: 50px;
+  padding: 10px 15px;
 `;
 const InnerBox = styled.div`
   display: flex;
@@ -205,22 +211,18 @@ const InnerBox = styled.div`
   color: #00c981;
 `;
 const Model = styled.div`
-  padding-top: 10px;
-  background-color: #d1fceb;
-  width: 300px;
-  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-content: center;
 `;
 const Box = styled.div`
   display: flex;
+
   gap: 30px;
   margin-top: 5%;
   margin-bottom: 10px;
 `;
 const BackIMG = styled.img`
-  margin-top: 25%;
   max-height: 293px;
   width: 100%;
   @media screen and (min-width: 801px) {
@@ -277,6 +279,7 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  min-height: 815px;
 
   @media screen and (min-width: 801px) {
     padding-top: 15%;
@@ -285,6 +288,7 @@ const Background = styled.div`
 const AlbumBox = styled.div`
   width: 217px;
   height: 337px;
+  min-height: 337px;
   background-color: white;
   margin: 30px auto;
   border-radius: 25px;
@@ -313,6 +317,7 @@ const AlbumBox = styled.div`
 const StartButton = styled.button`
   width: 184px;
   height: 64px;
+  min-height: 64px;
   font-size: 14px;
   font-family: 'happinessSans';
   display: block;

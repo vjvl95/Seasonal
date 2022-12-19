@@ -2,7 +2,6 @@ import { slot } from 'component/common/const';
 
 export default function findSlot(location) {
   const searchURL = decodeURI(location.search).split('=');
-  console.log(searchURL);
   const userName = searchURL[1].slice(0, searchURL[1].indexOf('&'));
   const songName = location.pathname.split('/')[2];
   const returnArr = slot

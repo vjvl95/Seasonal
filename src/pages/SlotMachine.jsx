@@ -39,10 +39,6 @@ export default function SlotMachine() {
     }
   }, [isClick]);
 
-  useEffect(() => {
-    console.log(state);
-  });
-
   return (
     <>
       <Background>
