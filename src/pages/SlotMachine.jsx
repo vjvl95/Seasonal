@@ -68,7 +68,7 @@ export default function SlotMachine() {
           />
         </SlotBox>
         <ButtonBox>
-          {!isClick && <LeverText>손잡이를 내려 럭키슬롯을 돌려주세요</LeverText>}
+          {!isClick && <LeverText>손잡이를 터치해서 럭키슬롯을 돌려주세요</LeverText>}
 
           <Lever isClicked={isClick} onClick={() => setIsClick(!isClick)}>
             <LeverImgBall src={lever_ball} alt='' isBall={true} isClicked={isClick} />

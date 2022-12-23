@@ -37,7 +37,7 @@ export default function Result() {
       content: {
         title: '2023년 당신의 새해첫곡은?', // 인자값으로 받은 title
         description: '#새해첫곡', // 인자값으로 받은 title
-        imageUrl: '이미지 url',
+        imageUrl: 'https://drive.google.com/uc?id=1a2aLNsEpI9l4-Io_wdX05Ws1lNr3bFV1',
         link: {
           mobileWebUrl: 'https://newyearsong2023.netlify.app', // 인자값으로 받은 route(uri 형태)
           webUrl: 'https://newyearsong2023.netlify.app/',
