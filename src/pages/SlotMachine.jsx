@@ -12,6 +12,7 @@ import { slot } from 'component/common/const';
 import { buttonEmoticon } from 'img';
 import { useEffect } from 'react';
 import selectBackGround from '../util/selectBackground';
+import trackingPage from '../util/trackingPage';
 
 export default function SlotMachine() {
   const [isClick, setIsClick] = useState(false);
@@ -20,7 +21,6 @@ export default function SlotMachine() {
   const location = useLocation();
   const { state } = location;
   const nav = useNavigate();
-
   const slotIndex =
     // eslint-disable-next-line react-hooks/rules-of-hooks
     state === null ? nav('/404') : useMemo(() => findIndex(state?.category), [state]);
@@ -38,7 +38,9 @@ export default function SlotMachine() {
       }, 2000);
     }
   }, [isClick]);
-
+  useEffect(() => {
+    trackingPage();
+  }, []);
   return (
     <>
       <Background>

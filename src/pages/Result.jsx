@@ -11,6 +11,8 @@ import { useScript } from 'util/useScript';
 import kakaoLogo from '../img/kakaoLogo.svg';
 import findSlot from 'util/findSlot';
 import songDirection from '../img/songDirection.png';
+import trackingPage from '../util/trackingPage';
+
 const { REACT_APP_KAKAO_KEY } = process.env;
 export default function Result() {
   const location = useLocation();
@@ -30,7 +32,9 @@ export default function Result() {
       }
     }
   }, [status]);
-
+  useEffect(() => {
+    trackingPage();
+  }, []);
   const handleKakaoButton = () => {
     window.Kakao.Link.sendDefault({
       objectType: 'feed', // 카카오 링크 공유 여러 type들 중 feed라는 타입 -> 자세한 건 카카오에서 확인

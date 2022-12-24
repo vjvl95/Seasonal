@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { data } from '../component/common/const';
 import { useEffect } from 'react';
+import trackingPage from '../util/trackingPage';
 
 export default function Category() {
   const location = useLocation();
@@ -12,11 +13,11 @@ export default function Category() {
   const [category, setCategory] = useState('');
   const [name] = useState(state?.name);
   const [isClicked, setIsClicked] = useState(false);
-
   useEffect(() => {
     if (state === null) {
       nav('/404');
     }
+    trackingPage();
   });
   return (
     <>

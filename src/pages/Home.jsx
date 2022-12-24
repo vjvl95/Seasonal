@@ -3,7 +3,15 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import illustrate from '../img/illustrate.png';
 import { backgroundClova } from 'img';
+import trackingPage from '../util/trackingPage';
+
+import { useEffect } from 'react';
+
 export default function Home() {
+  useEffect(() => {
+    trackingPage();
+  }, []);
+
   return (
     <>
       <Background>

@@ -1,9 +1,12 @@
 import BlackBox from 'component/common/BlackBox';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import trackingPage from '../util/trackingPage';
 export default function Name() {
+  useEffect(() => {
+    trackingPage();
+  }, []);
   const [name, setName] = useState('');
   const isVaildName = name.length > 1 && name.length <= 20;
   return (
