@@ -11,16 +11,10 @@ export default function WithoutTopBottom() {
   );
 }
 
-const Root = styled.div`
-  @media screen and (min-width: 1100px) {
-    width: 40%;
-    margin: 0 auto;
-    height: 100%;
-  }
-`;
+const Root = styled.div``;
 const Container = styled.div`
   margin: 0 auto;
-  height: 100%;
+  height: 100vh;
   @media screen and (max-width: 601px) {
     width: 100%;
   }

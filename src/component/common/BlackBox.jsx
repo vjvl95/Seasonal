@@ -1,8 +1,21 @@
 import styled from 'styled-components';
 
-export default function BlackBox({ children, fontSize, marginTop, paddingTop, isFlex = true }) {
+export default function BlackBox({
+  children,
+  fontSize,
+  marginTop,
+  paddingTop,
+  isFlex = true,
+  widthSize = '30%',
+}) {
   return (
-    <Title fontSize={fontSize} marginTop={marginTop} isFlex={isFlex} paddingTop={paddingTop}>
+    <Title
+      fontSize={fontSize}
+      marginTop={marginTop}
+      isFlex={isFlex}
+      paddingTop={paddingTop}
+      widthSize={widthSize}
+    >
       {children}
     </Title>
   );
@@ -27,6 +40,6 @@ const Title = styled.div`
   padding-top: ${({ paddingTop }) => paddingTop};
   margin-top: ${({ marginTop }) => marginTop};
   @media screen and (min-width: 801px) {
-    width: 30%;
+    width: ${({ widthSize }) => widthSize};
   }
 `;

@@ -70,7 +70,7 @@ export default function Result() {
       <Background back={backGroundIMG[0]}>
         {isClicked ? (
           <>
-            <BlackBox isFlex={false} paddingTop={'15px'}>
+            <BlackBox isFlex={false} paddingTop={'15px'} widthSize='40%'>
               <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>
               의
               <br />
@@ -81,7 +81,7 @@ export default function Result() {
           </>
         ) : (
           <>
-            <BlackBox isFlex={false} paddingTop={'15px'}>
+            <BlackBox isFlex={false} paddingTop={'15px'} widthSize='40%'>
               <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>
               의
               <br />
@@ -207,6 +207,12 @@ const SnsBox = styled.div`
   background-color: #d1fceb;
   border-radius: 50px;
   padding: 10px 15px;
+  @media screen and (min-width: 801px) {
+    position: inherit;
+    display: flex;
+    padding: 15px;
+    flex-direction: row;
+  }
 `;
 const InnerBox = styled.div`
   display: flex;
@@ -223,7 +229,7 @@ const Box = styled.div`
   display: flex;
 
   gap: 30px;
-  margin-top: 5%;
+  margin-top: 3%;
   margin-bottom: 10px;
 `;
 const BackIMG = styled.img`
@@ -261,8 +267,8 @@ const Album = styled.img`
   margin: 0px auto;
   border-radius: 13px;
   @media screen and (min-width: 801px) {
-    width: 200px;
-    height: 200px;
+    width: 50%;
+    height: 50%;
   }
 `;
 const Singer = styled.div`
@@ -279,11 +285,11 @@ const Background = styled.div`
   background-image: ${(props) => `url(${props.back})`};
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   min-height: 815px;
 
   @media screen and (min-width: 801px) {
-    padding-top: 15%;
+    padding-top: 5%;
   }
 `;
 const AlbumBox = styled.div`
@@ -307,6 +313,8 @@ const AlbumBox = styled.div`
   @media screen and (min-width: 801px) {
     width: 50%;
     height: 50%;
+    max-width: 550px;
+    max-height: 550px;
     padding-top: 0px;
   }
   ${(props) =>
