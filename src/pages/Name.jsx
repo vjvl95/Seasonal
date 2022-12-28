@@ -8,7 +8,7 @@ export default function Name() {
     trackingPage();
   }, []);
   const [name, setName] = useState('');
-  const isVaildName = name.length > 1 && name.length <= 20;
+  const isVaildName = name.length >= 1 && name.length <= 20;
   return (
     <>
       <Background>
