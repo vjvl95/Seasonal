@@ -40,6 +40,8 @@ const Title = styled.div`
   padding-top: ${({ paddingTop }) => paddingTop};
   margin-top: ${({ marginTop }) => marginTop};
   @media screen and (min-width: 801px) {
+    min-width: 450px;
+
     width: ${({ widthSize }) => widthSize};
   }
 `;

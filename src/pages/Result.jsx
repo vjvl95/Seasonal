@@ -235,6 +235,10 @@ const Box = styled.div`
 const BackIMG = styled.img`
   max-height: 293px;
   width: 100%;
+  @media screen and (min-width: 801px) {
+    object-fit: cover;
+    padding-top: 20px;
+  }
 `;
 const Front = styled.div`
   position: absolute;
@@ -246,6 +250,9 @@ const Back = styled.div`
   position: relative;
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  @media screen and (min-width: 801px) {
+    max-height: 550px;
+  }
 `;
 const Lyrics = styled.div`
   margin-top: 20px;
@@ -311,9 +318,10 @@ const AlbumBox = styled.div`
   transform-style: preserve-3d;
 
   @media screen and (min-width: 801px) {
-    width: 50%;
+    width: 30%;
     height: 50%;
-    max-width: 550px;
+    min-width: 350px;
+    max-width: 400px;
     max-height: 550px;
     padding-top: 0px;
   }
