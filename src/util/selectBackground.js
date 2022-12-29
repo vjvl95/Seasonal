@@ -15,11 +15,11 @@ export default function selectBackGround(category) {
     case '애정운':
       return [loveBackground, '#F38DE9'];
     case '학업운':
-      return [workBackground, '#8DE1F3'];
+      return [studyBackground, '#8DE1F3'];
     case '행운':
       return [luckyBackground, '#FF9797'];
     case '직장운':
-      return [studyBackground, '#9D9BFF'];
+      return [workBackground, '#9D9BFF'];
     default:
   }
 }
