@@ -6,14 +6,18 @@ import { useState, useEffect } from 'react';
 import HomeButton from '../img/HomeButton.png';
 import SNSButton from '../img/shareButton.png';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { FacebookShareButton, FacebookIcon, TwitterIcon, TwitterShareButton } from 'react-share';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  TwitterShareButton,
+} from 'react-share';
 import { useScript } from 'util/useScript';
 import kakaoLogo from '../img/kakaoLogo.svg';
 import findSlot from 'util/findSlot';
 import songDirection from '../img/songDirection.png';
 import trackingPage from '../util/trackingPage';
 
-const { REACT_APP_KAKAO_KEY } = process.env;
 export default function Result() {
   const location = useLocation();
   const { state } = location;
@@ -28,7 +32,7 @@ export default function Result() {
   useEffect(() => {
     if (status === 'ready' && window.Kakao) {
       if (!window.Kakao.isInitialized()) {
-        window.Kakao.init(REACT_APP_KAKAO_KEY);
+        window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
       }
     }
   }, [status]);
@@ -41,7 +45,8 @@ export default function Result() {
       content: {
         title: '2023년 당신의 새해첫곡은?', // 인자값으로 받은 title
         description: '#새해첫곡', // 인자값으로 받은 title
-        imageUrl: 'https://drive.google.com/uc?id=1a2aLNsEpI9l4-Io_wdX05Ws1lNr3bFV1',
+        imageUrl:
+          'https://drive.google.com/uc?id=1a2aLNsEpI9l4-Io_wdX05Ws1lNr3bFV1',
         link: {
           mobileWebUrl: 'https://newyearsong2023.netlify.app', // 인자값으로 받은 route(uri 형태)
           webUrl: 'https://newyearsong2023.netlify.app/',
@@ -71,10 +76,18 @@ export default function Result() {
         {isClicked ? (
           <>
             <BlackBox isFlex={false} paddingTop={'15px'} widthSize='40%'>
-              <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>
+              <span style={{ fontWeight: '700', fontSize: '16px' }}>
+                {state?.name || slot[0]}
+              </span>
               의
               <br />
-              <span style={{ fontWeight: '500', fontSize: '16px', fontFamily: 'DOSGothic' }}>
+              <span
+                style={{
+                  fontWeight: '500',
+                  fontSize: '16px',
+                  fontFamily: 'DOSGothic',
+                }}
+              >
                 2023년 {state?.category || slot[2]} 포토카드
               </span>
             </BlackBox>
@@ -82,10 +95,18 @@ export default function Result() {
         ) : (
           <>
             <BlackBox isFlex={false} paddingTop={'15px'} widthSize='40%'>
-              <span style={{ fontWeight: '700', fontSize: '16px' }}>{state?.name || slot[0]}</span>
+              <span style={{ fontWeight: '700', fontSize: '16px' }}>
+                {state?.name || slot[0]}
+              </span>
               의
               <br />
-              <span style={{ fontWeight: '500', fontSize: '16px', fontFamily: 'DOSGothic' }}>
+              <span
+                style={{
+                  fontWeight: '500',
+                  fontSize: '16px',
+                  fontFamily: 'DOSGothic',
+                }}
+              >
                 2023년 새해 첫 곡
               </span>
             </BlackBox>
@@ -96,7 +117,11 @@ export default function Result() {
           <Front>
             <Title>{state?.slot[6] || slot[1][6]}</Title>
             <Singer>{state?.slot[7] || slot[1][7]}</Singer>
-            <a href={state?.slot[10] || slot[1][10]} rel='noreferrer' target='_blank'>
+            <a
+              href={state?.slot[10] || slot[1][10]}
+              rel='noreferrer'
+              target='_blank'
+            >
               <Album src={state?.slot[8] || slot[1][8]}></Album>
             </a>
             <SongLink>
@@ -112,9 +137,13 @@ export default function Result() {
                 }}
                 alt=''
               />
-              <span style={{ fontSize: '8.93px' }}>어떤 노래일까? 들어보러가기</span>
+              <span style={{ fontSize: '8.93px' }}>
+                어떤 노래일까? 들어보러가기
+              </span>
             </SongLink>
-            <Lyrics color={backGroundIMG[1]}>{state?.slot[5] || slot[1][5]}</Lyrics>
+            <Lyrics color={backGroundIMG[1]}>
+              {state?.slot[5] || slot[1][5]}
+            </Lyrics>
           </Front>
           <Back>
             <BackIMG src={state?.slot[9] || slot[1][9]}></BackIMG>
@@ -135,7 +164,11 @@ export default function Result() {
               <span style={{ marginTop: '5px' }}>SNS 공유</span>
             </InnerBox>
             <NavLink
-              style={{ display: 'block', color: '#00c981', textDecorationLine: 'none' }}
+              style={{
+                display: 'block',
+                color: '#00c981',
+                textDecorationLine: 'none',
+              }}
               to={'/'}
             >
               <InnerBox>
@@ -150,10 +183,18 @@ export default function Result() {
           <Model>
             <SnsBox>
               <FacebookShareButton url={currentUrl}>
-                <FacebookIcon size={40} round={true} borderRadius={24}></FacebookIcon>
+                <FacebookIcon
+                  size={40}
+                  round={true}
+                  borderRadius={24}
+                ></FacebookIcon>
               </FacebookShareButton>
               <TwitterShareButton url={currentUrl}>
-                <TwitterIcon size={40} round={true} borderRadius={24}></TwitterIcon>
+                <TwitterIcon
+                  size={40}
+                  round={true}
+                  borderRadius={24}
+                ></TwitterIcon>
               </TwitterShareButton>
               <CopyToClipboard text={currentUrl}>
                 <URLShareButton>URL</URLShareButton>
